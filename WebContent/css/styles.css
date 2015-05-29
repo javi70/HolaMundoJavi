@@ -1,0 +1,294 @@
+/* 
+	version: 1.0
+	autor: Javi
+	fecha: 20150518
+	
+*/
+
+/**************** RESET de momento lo dejamos aparte ***************************/
+/* resetea todos los estilos para cualquier navegador */
+@import url("reset.css"); /* lo importamos de un fichero interno */
+
+/**************** DEFINICION DE LOS ESTILOS DE LAS ETIQUETAS *******************************/
+/* damos un estilo general o base a toda la web */
+P {
+	font-family: Arial;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 20px;
+	/* hace una separacion entre el p�rrafo y lo que tenga debajo */
+}
+
+body {
+	background: url('../img/fondo.jpg');
+	font-family: arial; /* para que todas las p�ginas tengan arial */
+}
+
+/* Regla con selector por ETIQUETA = ELEMENTO = TAG */
+h1 {
+	color: green;
+	font-size: 50px;
+	font-family: arial;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+h2 {
+	color: black;
+	font-size: 30px;
+	font-family: arial;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+strong {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	/* quitamos el subrayado a los enlaces de todas las paginas */
+}
+
+a:hover { /* pseudoselector: cuando te pones encima del enlace */
+	color: orange;
+}
+
+ol, ul {
+	list-style-type: disc;
+}
+
+ol h3, ul h3 { /* porque en nuestro menu usamos H3 en el index */
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+li {
+	margin-bottom: 8px;
+}
+
+ol ol, ul ul { /* estilos para las listas anidadas */
+	margin-left: 20px;
+	list-style-type: circle;
+}
+
+p{
+	font-family: arial;
+	font-size:16px;
+	text-align:justify;
+	line-height:20px;
+}
+
+fieldset{
+	border:1px solid grey;	
+	padding: 20px 30px;
+	margin-bottom: 20px;
+}
+
+legend{
+	font-weight: bold;
+}
+
+.mark{
+	background-color: yellow;	
+}
+
+article{
+	border: 1px solid #013729;
+	padding: 20px;
+	margin-bottom: 25px;
+}
+
+article h1{
+	background-color: #88ABCB;
+	color: #C10D57;
+	font-size: 25px;
+	padding: 5px 0px;	
+}
+
+/************** ESTILOS REUTILIZABLES --- CLASES **************************/
+/* regla con selector por CLASS para usar en todas las p�ginas */
+/* Regla con selector por CLASS */
+.numero {
+	font-size: 50px;
+	color: #0099FF;
+	font-family: Arial;
+}
+
+.encabezado {
+	border: 1px solid green;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+.verde {
+	color: green;
+}
+
+table.tabla_azul, .tabla_azul tr, .tabla_azul td {
+	/* aplicamos el mismo estilo a las 3 etiquetas */
+	border: 1px solid grey;
+	text-align: center;
+	color: #0099FF;
+	font-family: arial;
+	font-size: 35px;
+}
+
+.tabla_azul th, .tabla_azul td {
+	padding: 10px;
+	height: 40px;
+}
+
+.tabla_azul th {
+	color: grey;
+}
+
+.logo_pie{
+	height:20px;
+	width:20px;
+}
+
+.fotocara{
+	height:50px;
+	width:auto;
+}
+
+/* Estilos utilizados en detalle_pelicula */
+.titulo {
+	/*	border: 1px solid #000000;
+	color: red;*/
+	text-align: center;
+}
+
+.cartel {
+	height: auto;
+	width: 250px;
+	float: left;
+	margin-right: 30px;
+}
+
+.destacado {
+	color: green;
+	font-weight: bold;
+}
+
+.titulopelicula {
+	color: blue;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.datospelicula {
+	color: blue;
+	font-size: 15px;
+}
+
+.fotopelicula {
+	width: 250px;
+	height: 357px;
+}
+
+.flechavolver {
+	width: 40px;
+	height: auto;
+}
+
+/******************** PAGINAS *************************************/
+/* tendremos una seccion por cada pagina de nuestra web */
+
+/* HOME */
+#logo img {
+	height: 50px;
+	width: 50px;
+}
+
+#home {
+	
+}
+
+/* CARTELERA */
+#cartelera li h3 { /* solo se aplica a los h3 del li de cartelera */
+	color: #0076EC;
+	font-family: "dinengschriftstd", "Another Font", generic;
+	font-size: 25px;
+	font-weight: 500;
+}
+
+#cartelera li h3:hover {
+	color: orange;
+}
+
+/* CARTELERA_DETALLE */
+#cartelera_detalle h1 {
+	color: blue;
+	text-align: left;
+}
+/* TABLA_AVANADA */
+#tabla_avanzada h1 {
+	color: blue;
+	text-align: left;
+}
+
+/*******************************************************************************************************/
+#imagen1 {
+	height: 150px;
+	width: 250px;
+}
+
+#dado {
+	height: 150px;
+	width: 150px;
+}
+
+/* Estilos utilizados en elementos_basicos.html */
+#container {
+	width: 900px;
+	margin: 0 auto; /* centra la capa en pantalla */
+	padding: 0 20px;
+	/* margen interior arriba y abajo 0px e izq y der 20px */
+	border-right: 1px solid grey;
+	border-left: 1px solid grey;
+	background-color: white;
+	clear: both;
+}
+
+#sinopsis {
+	float: left;
+	height: 200px;
+	overflow: scroll;
+	font-size: 20px;
+	text-align: justify;
+}
+
+#ficha {
+	float: left;
+	width: 580px;
+	min-height: 360px;
+	/* altura minima para que baje el argumento debajo de la foto */
+	margin-bottom: 20px;
+}
+
+#ficha p { /* selecciona los P que estan dentro de div ficha */
+	font-size: 35px;
+	line-height: 45px;
+}
+
+#tabla_telefonos {
+	font-size: 13px;
+	color: blue;
+}
+
+#tabla_telefonos th {
+	font-weight: bolder;
+}
+
+.celda_centrada {
+	text-align: center;
+}
+
+.celda_derecha {
+	text-align: right;
+	font-weight: bold;
+}
