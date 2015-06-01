@@ -59,6 +59,9 @@
 		<li><a href="https://validator.w3.org/" target="_blank">W3c Validator</a></li>
 		<li><a href="http://github.com/" target="_blank">GitHub</a></li>
 		<li><a href="http://formacion.ipartek.com/campus/" target="_blank">Campus Ipartek</a></li>
+		<li><a href="http://librosweb.es/libro/css/" target="_blank">CSS básico</a></li>
+		<li><a href="http://librosweb.es/libro/css_avanzado/" target="_blank">CSS Avanzado</a></li>
+		
 	</ul>
 </aside>	
 
