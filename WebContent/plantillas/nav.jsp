@@ -53,7 +53,12 @@
 				<li>
 					<h4>Posicionamiento</h4>
 					<ul>
-						<li></li>										
+						<li><a href="ejemplos/css/posicionamiento/normal.jsp">Normal</a></li>
+						<li><a href="ejemplos/css/posicionamiento/relativo.jsp">Relativo</a></li>											
+						<li><a href="ejemplos/css/posicionamiento/absoluto.jsp">Absoluto</a></li>
+						<li><a href="ejemplos/css/posicionamiento/fijo.jsp">Fijo</a></li>
+						<li><a href="ejemplos/css/posicionamiento/inherit.jsp">Inherit</a></li>																							
+						<li><a href="ejemplos/css/posicionamiento/float.jsp">Elementos flotantes</a></li>						
 					</ul>
 				</li>
 			</ul>
