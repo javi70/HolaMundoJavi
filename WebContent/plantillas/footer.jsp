@@ -1,3 +1,4 @@
+</div> <!--  del content abierto al final de nav -->
 <footer>
 	<!--  queda fuera de la lista porque no es un enlace, se hace así por semántica  -->
 	<span class="copy">&copy;Ipartek Servicios Informáticos</span> 
