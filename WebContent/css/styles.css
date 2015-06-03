@@ -117,7 +117,7 @@ article h1{
 /* regla con selector por CLASS para usar en todas las p�ginas */
 /* Regla con selector por CLASS */
 .numero {
-	font-size: 50px;
+	font-size: 20px;
 	color: #0099FF;
 	font-family: Arial;
 }
@@ -140,12 +140,12 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	text-align: center;
 	color: #0099FF;
 	font-family: arial;
-	font-size: 35px;
+	font-size: 20px;
 }
 
 .tabla_azul th, .tabla_azul td {
 	padding: 10px;
-	height: 40px;
+	height: 20px;
 }
 
 .tabla_azul th {
@@ -311,7 +311,7 @@ nav{
 	height: 50px;
 	padding: 0px;
 	position:fixed;
-	top:125px;
+	top:80px;
 	left:350px;
 }
 
@@ -364,7 +364,7 @@ nav ul, nav li{
 /***************************ESTILOS PARA HEAD ****************************/
 
 #content{
-	padding-top: 150px; /* para separar la pagina de la cabecera */	
+	padding-top: 170px; /* para separar la pagina de la cabecera */	
 }
 
 #head{
@@ -379,27 +379,25 @@ nav ul, nav li{
 	float:left;
 }
 
-#container{
-/*	position:absolute;
-	top:150px;
-	left:150px;*/
-}
 
-aside{
-	position:fixed;
+#aside_home{
+/*	position:fixed;
 	top:500px;
-	right:10px;
+	right:10px;*/
 	border:3px solid black;
 	background-color:#8AC007;
 	padding:10px;
+	float:right;
+	width:15%;	
+	
 }
 
-aside h3{
-	font-size:20px;
+#aside_home h3{
+	font-size:15px;
 	font-style:bold;
 }
 
-aside li{
+#aside_home li{
 	list-style:none;	
 }
 /*************************** ESTILOS PARA CARTELERA_CINE ******************************/
@@ -412,4 +410,20 @@ aside li{
 
 #cartelera h3{
 	text-align:center;
+}
+
+/*******************  ESTILOS PARA INDEX ************************************/
+
+#dado_afortunado{
+	float:left;
+	width:25%;
+	margin-right:2%;
+}
+
+#tabla_dado{
+	float:left;
+	width:50%;
+	font-size: 50px;
+	color: #0099FF;
+	font-family: Arial;
 }

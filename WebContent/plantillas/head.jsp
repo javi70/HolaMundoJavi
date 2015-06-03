@@ -34,7 +34,7 @@
 		<div id="logo">
 			<a href="index.jsp"><img src="img/dado.jpg" alt="Volver a la home" /></a>
 		</div>
-		<h1>Ejemplos de HTML5, CSS3 y JavaScript</h1>
+		<h1>HTML5, CSS3 y JavaScript</h1>
 	  </div>
 	  
 	  <!--  Navegacion menu principal -->
