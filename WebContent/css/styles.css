@@ -427,3 +427,8 @@ nav ul, nav li{
 	color: #0099FF;
 	font-family: Arial;
 }
+
+#btn_ganador{
+	width:100px;
+	height:auto;
+}
