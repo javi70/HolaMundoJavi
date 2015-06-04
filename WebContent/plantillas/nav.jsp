@@ -18,8 +18,8 @@
 				<li>
 					<a href="#">Reales</a>
 					<ul>
+						<li><a href="ejemplos/reales/cartelera_cine.jsp">Cartelera</a></li>					
 						<li><a href="ejemplos/reales/cartelera_detalle.jsp">Detalle cartelera</a></li>
-						<li><a href="ejemplos/reales/cartelera_cine.jsp">Cartelera</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -72,6 +72,11 @@
 						<li><a href="ejemplos/css/posicionamiento/fijo.jsp">Fijo</a></li>
 						<li><a href="ejemplos/css/posicionamiento/inherit.jsp">Inherit</a></li>																							
 						<li><a href="ejemplos/css/posicionamiento/float.jsp">Elementos flotantes</a></li>						
+					</ul>
+				</li>
+				<li><a href="#">Técnicas Avanzadas</a>
+					<ul>
+						<li><a href="ejemplos/css/tecnicas_avanzadas/fontawesome.jsp">Font Awesome</a></li>						
 					</ul>
 				</li>
 			</ul>

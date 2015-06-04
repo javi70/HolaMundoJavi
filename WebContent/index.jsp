@@ -58,6 +58,9 @@
 		<li><a href="http://formacion.ipartek.com/campus/" target="_blank">Campus Ipartek</a></li>
 		<li><a href="http://librosweb.es/libro/css/" target="_blank">CSS básico</a></li>
 		<li><a href="http://librosweb.es/libro/css_avanzado/" target="_blank">CSS Avanzado</a></li>
+		<li><a href="http://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+		<li><a href="http://es.learnlayout.com/clearfix.html" target="_blank">Clearfix con overflow</a></li>
+			
 		
 	</ul>
 </aside>	

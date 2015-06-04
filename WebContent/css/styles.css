@@ -54,6 +54,13 @@ a:hover { /* pseudoselector: cuando te pones encima del enlace */
 	color: orange;
 }
 
+/* despues del ancla genera un contenido al vuelo al pasar el raton por un ancla */
+/*
+a:hover:after {  
+	content: " (" attr(href) ") "; 
+}
+*/
+
 ol, ul {
 	list-style-type: disc;
 }
@@ -169,7 +176,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	text-align: center;
 }
 
-.cartel {
+#cartelera_detalle .cartel {
 	height: auto;
 	width: 250px;
 	float: left;
@@ -216,15 +223,45 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 }
 
 /* CARTELERA */
-#cartelera li h3 { /* solo se aplica a los h3 del li de cartelera */
-	color: #0076EC;
-	font-family: "dinengschriftstd", "Another Font", generic;
-	font-size: 25px;
-	font-weight: 500;
+
+#cartelera ul{
+	float:left;
+	padding-left:5%;
 }
 
-#cartelera li h3:hover {
-	color: orange;
+#cartelera li{
+	float: left;
+	width:30%;
+	margin-right:2%;
+	list-style:none;
+}
+
+#cartelera li:nth-child(3n+0){ /* para quitar el margen que queda a la derecha del ultimo elemento de cada fila */
+	margin-right:0%;
+}
+
+#cartelera .cartel{
+	position:relative;
+	width:200px;
+}
+
+#cartelera .titulo{
+	position:absolute;
+	bottom:0;
+	background-color:rgba(0,0,0,0.5);
+	width:90%;
+	padding: 3% 5%;
+	min-height: 40px;
+	display:none; /* para ocultar el titulo */ 
+}
+
+#cartelera .cartel:hover .titulo{ /* muestra el titulo al entrar el cartel */
+	display:block;
+}
+
+#cartelera titulo h3{
+	color:#0099FF;
+	text-align:center;
 }
 
 /* CARTELERA_DETALLE */
@@ -364,14 +401,15 @@ nav ul, nav li{
 /***************************ESTILOS PARA HEAD ****************************/
 
 #content{
-	padding-top: 170px; /* para separar la pagina de la cabecera */	
+	padding-top: 125px; /* para separar la pagina de la cabecera */	
 }
 
 #head{
 	position:fixed;
 	background-color:#FFF;
 	width: 900px;
-	padding-top: 10px;	
+	padding-top: 10px;
+	z-index: 100; /* para que quede siempre por encima de todo */	
 }
 
 /* flotamos el logo y el h1 de la cabecera a la izda */
@@ -385,31 +423,23 @@ nav ul, nav li{
 	top:500px;
 	right:10px;*/
 	border:3px solid black;
+	border-radius:20px 20px 20px 20px;
 	background-color:#8AC007;
 	padding:10px;
 	float:right;
 	width:15%;	
-	
+	font-size:12px;	
 }
 
 #aside_home h3{
 	font-size:15px;
 	font-style:bold;
+	margin-bottom:10px;
+	text-decoration:underline;
 }
 
 #aside_home li{
-	list-style:none;	
-}
-/*************************** ESTILOS PARA CARTELERA_CINE ******************************/
-
-#cnt_peli{
-	display:inline;
-	float:left;
-	margin:2px;
-}
-
-#cartelera h3{
-	text-align:center;
+	list-style-type:none;	
 }
 
 /*******************  ESTILOS PARA INDEX ************************************/
@@ -418,6 +448,7 @@ nav ul, nav li{
 	float:left;
 	width:25%;
 	margin-right:2%;
+	text-align: center;	
 }
 
 #tabla_dado{
@@ -431,4 +462,14 @@ nav ul, nav li{
 #btn_ganador{
 	width:100px;
 	height:auto;
+}
+
+/************************ FONTAWESOME **********************************/
+
+#fontawesome .verde{
+	color:green;
+}
+
+#fontawesome .azul{
+	color:blue;
 }

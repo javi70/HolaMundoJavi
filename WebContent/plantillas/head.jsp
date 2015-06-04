@@ -15,6 +15,8 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.0">
+<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
