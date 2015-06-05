@@ -76,7 +76,8 @@
 				</li>
 				<li><a href="#">Técnicas Avanzadas</a>
 					<ul>
-						<li><a href="ejemplos/css/tecnicas_avanzadas/fontawesome.jsp">Font Awesome</a></li>						
+						<li><a href="ejemplos/css/tecnicas_avanzadas/fontawesome.jsp">Font Awesome</a></li>
+						<li><a href="ejemplos/css/tecnicas_avanzadas/sprites.jsp">Sprites</a></li>												
 					</ul>
 				</li>
 			</ul>

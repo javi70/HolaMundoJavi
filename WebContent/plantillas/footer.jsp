@@ -9,13 +9,21 @@
 		<li><a href="#">Aviso Legal</a></li>
 	</ul>
 	
-	<!--  Lista de enlaces para redes sociales -->
+	<!--  Lista de enlaces para redes sociales con sprites -->
 	<ul id="list_rrss">
-		<li><a href="http://www.facebook.com" title="Facebook" target="_blank"><img src="img/facebook-logo.png" alt="Logo de Facebook" class="logo_pie"/></a></li>
-		<li><a href="http://www.twitter.com" title="Twitter" target="_blank"><img src="img/twitter-logo.jpg" class="logo_pie" alt="Logo de Twitter" /></a></li>
-		<li><a href="http://www.youtube.com" title="Youtube" target="_blank"><img src="img/youtube-logo.png" class="logo_pie" alt="Logo de Youtube" /></a></li>
-		<li><a href="http://www.instagram.com" title="Instagram" target="_blank"><img src="img/instagram-logo.png" class="logo_pie" alt="Logo de Instagram" /></a></li>
+		<li class="sprite_facebook"><a href="http://www.facebook.com" title="Facebook" target="_blank"><img src="img/pixel.gif"/></a></li>
+		<li class="sprite_twitter"><a href="http://www.twitter.com" title="Twitter" target="_blank"><img src="img/pixel.gif"/></a></li>
+		<li class="sprite_youtube"><a href="http://www.youtube.com" title="Youtube" target="_blank"><img src="img/pixel.gif"/></a></li>
+		<li class="sprite_instagram"><a href="http://www.instagram.com" title="Instagram" target="_blank"><img src="img/pixel.gif"/></a></li>
 	</ul>
+	
+	<!--  Lista de enlaces para redes sociales con awesomefonts -->
+	<ul id="list_rrss2">
+		<li><a href="http://www.facebook.com" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="http://www.twitter.com" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="http://www.youtube.com" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
+		<li><a href="http://www.instagram.com" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+	</ul>		
 </footer>
 
 

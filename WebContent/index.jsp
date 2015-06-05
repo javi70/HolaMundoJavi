@@ -3,6 +3,13 @@
 
 <div id="home" class="clearfix">
 
+<!--  Prueba de IconMoon -->
+
+<span class="icon-box"></span>
+
+<!--  Se pueden reutilizar las reglas del FontAwesome -->
+<span class="icon-folder fa-5x fa-spin"></span>
+
 <!--  Contenido principl de la pagina -->
 <section>
 	<h1>Pagina Ongi etorri</h1>
@@ -60,8 +67,7 @@
 		<li><a href="http://librosweb.es/libro/css_avanzado/" target="_blank">CSS Avanzado</a></li>
 		<li><a href="http://www.w3schools.com/" target="_blank">W3 Schools</a></li>
 		<li><a href="http://es.learnlayout.com/clearfix.html" target="_blank">Clearfix con overflow</a></li>
-			
-		
+		<li><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Degradados</a></li>			
 	</ul>
 </aside>	
 

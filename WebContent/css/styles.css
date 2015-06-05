@@ -159,10 +159,12 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	color: grey;
 }
 
+/*
 .logo_pie{
 	height:20px;
 	width:20px;
 }
+*/
 
 .fotocara{
 	height:50px;
@@ -472,4 +474,100 @@ nav ul, nav li{
 
 #fontawesome .azul{
 	color:blue;
+}
+
+#tamano{
+	font-size:60px;
+}
+
+/************************* SPRITES **************************************/
+
+#sprites li {
+	border:1px solid #000;
+	padding:15px 40px;
+	background-image: url("../img/sprite.png");
+	background-repeat: no-repeat;
+	list-style-type:none;
+}
+
+#sprite_pacman{
+  background-position: 0 -50px;
+}
+
+#sprite_fantasma{
+  background-position: 0 -98px;
+}
+
+#sprite_robot{
+  background-position: 0 0px;
+}
+
+/**********************FOOTER ************************************/
+
+#list_rrss{
+	list-style-type:none;	
+}
+
+#list_rrss li{
+	background-image: url("../img/mini-social-icons.png");
+	background-repeat: no-repeat;
+	float:left;
+}
+
+.sprite_facebook img, .sprite_twitter img, .sprite_youtube img, .sprite_instagram img {
+  height: 84px;
+  width: 84px;
+  vertical-align: middle;
+}
+
+.sprite_facebook{
+ 	background-position: 0 0;
+}
+
+.sprite_facebook:hover{
+ 	background-position: 0 -84px;	
+}
+
+.sprite_twitter{
+	background-position: -672px 0;
+}
+
+.sprite_twitter:hover{
+ 	background-position: -672px -84px;	
+}
+
+.sprite_youtube{
+	background-position: -840px 0;
+}
+
+.sprite_youtube:hover{
+ 	background-position: -840px -84px;	
+}
+
+.sprite_instagram{
+	background-position: -336px 0;
+}
+
+.sprite_instagram:hover{
+	background-position: -336px -84px;
+}
+
+/***** REDES SOCIALES CON AWESOMEFONTS ***************/
+
+#list_rrss2{
+	list-style-type:none;	
+}
+
+#list_rrss2 li a{
+	color:#888888;
+}
+
+#list_rrss2 li a:hover{
+	color:orange;
+}
+
+#list_rrss2 li{
+	float:right;
+	margin-right:20px;
+	font-size:35px;
 }
