@@ -7,7 +7,7 @@
 
 	<article>
 		<header>
-			<h2><mark>i</mark> y <mark>span</mark></h2>
+			<h1><mark>i</mark> y <mark>span</mark></h1>
 		</header>
 		<p>Ahora va con <mark>i</mark><i class="fa fa-coffee"></i></p>
 		<p>Ahora con un <mark>span</mark><span class="fa fa-coffee"></span>	</p>
@@ -15,7 +15,7 @@
 	
 	<article>
 		<header>
-			<h2>Cambio de color</h2>
+			<h1>Cambio de color</h1>
 		</header>
 		<p>Color verde<i class="fa fa-flag-o verde"></i></p>
 		<p>Color azul<i class="fa fa-diamond azul"></i></p>
@@ -23,7 +23,7 @@
 	
 	<article>
 		<header>
-			<h2>Cambio de tamaño</h2>
+			<h1>Cambio de tamaño</h1>
 		</header>
 		<p>Tamaño 1<i class="fa fa-cart-plus fa-lg"></i></p>
 		<p>Tamaño 2<i class="fa fa-diamond fa-2x"></i></p>
@@ -33,7 +33,7 @@
 
 	<article>
 		<header>
-			<h2>Iconos rotados</h2>
+			<h1>Iconos rotados</h1>
 			<i class="fa fa-venus-mars fa-3x fa-spin">Rota</i>
 			<i class="fa fa-venus-mars fa-3x fa-rotate-90">Gira 90º</i>
 			<i class="fa fa-venus-mars fa-3x fa-flip-vertical">Voltea vertical</i>
@@ -43,7 +43,7 @@
 
 	<article>
 		<header>
-			<h2>Ejemplos varios</h2>
+			<h1>Ejemplos varios</h1>
 		</header>
 			<span class="fa-stack fa-lg">
 				<i class="fa fa-square-o fa-stack-2x"></i>

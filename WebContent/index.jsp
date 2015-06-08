@@ -3,13 +3,6 @@
 
 <div id="home" class="clearfix">
 
-<!--  Prueba de IconMoon -->
-
-<span class="icon-box"></span>
-
-<!--  Se pueden reutilizar las reglas del FontAwesome -->
-<span class="icon-folder fa-5x fa-spin"></span>
-
 <!--  Contenido principl de la pagina -->
 <section>
 	<h1>Pagina Ongi etorri</h1>
@@ -71,16 +64,13 @@
 	</ul>
 </aside>	
 
-	<br/>
-	<br/>
-	<br/>
-  <script src="js/index.js" type="text/javascript"></script>	
-  <script>
+<script src="js/index.js" type="text/javascript"></script>	
+<script>
   	//lamada a la función init() de index.js
   	init();
-  </script>
+</script>
   
  
   
-  </div>	<!-- home -->
+</div>	<!-- home -->
 <jsp:include page="/plantillas/footer.jsp"></jsp:include>

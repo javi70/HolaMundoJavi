@@ -113,7 +113,19 @@ article h1{
 	padding: 5px 0px;	
 }
 
-/************ CLEARFIX *********************/
+footer{
+	border-top: 1px dotted #000;
+	padding-top:10px;
+	margin-top:10px;
+}
+
+#pie_general{
+	border-top: none;	
+	padding-top:0;
+	margin-top:0;
+
+}
+/******************************* CLEARFIX ******************************/
 
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
@@ -121,8 +133,6 @@ article h1{
 
 
 /************** ESTILOS REUTILIZABLES --- CLASES **************************/
-/* regla con selector por CLASS para usar en todas las p�ginas */
-/* Regla con selector por CLASS */
 .numero {
 	font-size: 20px;
 	color: #0099FF;
@@ -171,7 +181,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	width:auto;
 }
 
-/* Estilos utilizados en detalle_pelicula */
+/*************** DETALLE_PELICULA ***********/
 .titulo {
 	/*	border: 1px solid #000000;
 	color: red;*/
@@ -211,20 +221,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	height: auto;
 }
 
-/******************** PAGINAS *************************************/
-/* tendremos una seccion por cada pagina de nuestra web */
-
-/* HOME */
-#logo img {
-	height: 50px;
-	width: 50px;
-}
-
-#home {
-	
-}
-
-/* CARTELERA */
+/******************** CARTELERA *************************/
 
 #cartelera ul{
 	float:left;
@@ -272,9 +269,11 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	text-align: left;
 }
 /* TABLA_AVANADA */
+/*
 #tabla_avanzada h1 {
 	color: blue;
 	text-align: left;
+*/	
 }
 
 /*******************************************************************************************************/
@@ -288,7 +287,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	width: 150px;
 }
 
-/* Estilos utilizados en elementos_basicos.html */
+/**************** ELEMENTOS_BASICOS **********************************************/
 #container {
 	width: 900px;
 	margin: 0 auto; /* centra la capa en pantalla */
@@ -339,19 +338,23 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	font-weight: bold;
 }
 
-/************* ESTILOS PARA NAV **************************/
-nav li{
-	margin-bottom:0px;
+/******************************** NAV *************************************/
+
+nav * {
+	padding: 0px;
+	margin: 0px;
 }
 
-nav{
-	margin:0 auto;
+nav {
+	margin: 0px auto;
+	width: 100%;
 	font-family: Arial, Helvetica, sans-serif;
-	height: 50px;
-	padding: 0px;
-	position:fixed;
-	top:80px;
-	left:350px;
+  	position: relative;
+  	left: 20%;	
+}
+
+nav li{
+	margin-bottom:0px;
 }
 
 nav ul, nav li{
@@ -400,10 +403,13 @@ nav ul, nav li{
 	margin-bottom:0px;
 }
 
-/***************************ESTILOS PARA HEAD ****************************/
+/*************************** HEAD ****************************/
+
+header{100%;} /*copiado al profe */
 
 #content{
-	padding-top: 125px; /* para separar la pagina de la cabecera */	
+	padding-top: 125px; /* para separar la pagina de la cabecera */
+/*	margin-top:200px;*/	
 }
 
 #head{
@@ -444,7 +450,12 @@ nav ul, nav li{
 	list-style-type:none;	
 }
 
-/*******************  ESTILOS PARA INDEX ************************************/
+/******************* INDEX ************************************/
+
+#logo img {
+	height: 50px;
+	width: 50px;
+}
 
 #dado_afortunado{
 	float:left;
@@ -502,7 +513,6 @@ nav ul, nav li{
   background-position: 0 0px;
 }
 
-/**********************FOOTER ************************************/
 
 #list_rrss{
 	list-style-type:none;	
@@ -552,14 +562,18 @@ nav ul, nav li{
 	background-position: -336px -84px;
 }
 
+/********************** FOOTER ************************************/
+
+
+
 /***** REDES SOCIALES CON AWESOMEFONTS ***************/
 
 #list_rrss2{
-	list-style-type:none;	
+	list-style-type:none;
 }
 
 #list_rrss2 li a{
-	color:#888888;
+	color:#000;
 }
 
 #list_rrss2 li a:hover{
@@ -571,3 +585,5 @@ nav ul, nav li{
 	margin-right:20px;
 	font-size:35px;
 }
+
+

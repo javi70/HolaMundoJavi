@@ -1,5 +1,5 @@
 </div> <!--  del content abierto al final de nav -->
-<footer>
+<footer id="pie_general">
 	<!--  queda fuera de la lista porque no es un enlace, se hace así por semántica  -->
 	<span class="copy">&copy;Ipartek Servicios Informáticos</span> 
 	
@@ -7,14 +7,6 @@
 	<ul id="list_paginas">
 		<li><a href="#">Contacto</a></li>
 		<li><a href="#">Aviso Legal</a></li>
-	</ul>
-	
-	<!--  Lista de enlaces para redes sociales con sprites -->
-	<ul id="list_rrss">
-		<li class="sprite_facebook"><a href="http://www.facebook.com" title="Facebook" target="_blank"><img src="img/pixel.gif"/></a></li>
-		<li class="sprite_twitter"><a href="http://www.twitter.com" title="Twitter" target="_blank"><img src="img/pixel.gif"/></a></li>
-		<li class="sprite_youtube"><a href="http://www.youtube.com" title="Youtube" target="_blank"><img src="img/pixel.gif"/></a></li>
-		<li class="sprite_instagram"><a href="http://www.instagram.com" title="Instagram" target="_blank"><img src="img/pixel.gif"/></a></li>
 	</ul>
 	
 	<!--  Lista de enlaces para redes sociales con awesomefonts -->
@@ -37,7 +29,7 @@
 
 <!--  Convertir todos los textareas en TinyMce -->
 <script src="js/tinymce/tinymce.minjs"></script>
-<script>tinymce.init({seletor:'textarea'});</script>
+<script>tinymce.init({selector:'textarea'});</script>
 
 <!--  Custom JavaScript después de cargar nuestras librerías -->
 <script src="js/main.js"></script>

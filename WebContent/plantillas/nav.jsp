@@ -77,11 +77,19 @@
 				<li><a href="#">Técnicas Avanzadas</a>
 					<ul>
 						<li><a href="ejemplos/css/tecnicas_avanzadas/fontawesome.jsp">Font Awesome</a></li>
-						<li><a href="ejemplos/css/tecnicas_avanzadas/sprites.jsp">Sprites</a></li>												
+						<li><a href="ejemplos/css/tecnicas_avanzadas/sprites.jsp">Sprites</a></li>
+						<li><a href="ejemplos/css/tecnicas_avanzadas/iconfont.jsp">Icon Font</a></li>																		
 					</ul>
 				</li>
 			</ul>
 		</li>
+		<li>
+			<a href="#">JavaScript</a>
+			<ul>
+				<li><a href="ejemplos/javascript/variables.jsp">Variables</a></li>
+			</ul>				
+		</li>
+		
 	</ul>
 </nav>
 </header>
