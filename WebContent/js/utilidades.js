@@ -8,11 +8,15 @@
 	Calcula el precio de la entrada del cine de Almendralejo
 	@param dia: dia de la semana escrito así ['Lunes','Martes',..,'Domingo']
 	@param edad: edad de la persona, formato número entero
-	@return precio 
+	@return precio, o los siguientes códigos:
+		9999: error en el día
+		8888: error en la edad
 */
 function calcular_entrada(dia,edad){
 	var resultado=0;
+
 	
+	if ((edad<0)||(typeof(edad)=="undefined")||(edad % 1 != 0)) return 8888;
 	switch (dia){
 		case 'Lunes':
 			if (edad>=0 && edad<=35) resultado=2
@@ -36,6 +40,9 @@ function calcular_entrada(dia,edad){
 		case 'Sábado':
 		case 'Domingo':
 			resultado=10;
+			break;
+		default:
+			resultado=9999;
 		}//switch
 	return resultado;
 }//end:calcular_entrada

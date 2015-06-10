@@ -87,7 +87,8 @@
 			<a href="#">JavaScript</a>
 			<ul>
 				<li><a href="ejemplos/javascript/variables.jsp">Variables</a></li>
-				<li><a href="ejemplos/javascript/calculadora.jsp">Calculadora</a></li>				
+				<li><a href="ejemplos/javascript/calculadora.jsp">Calculadora</a></li>	
+				<li><a href="ejemplos/javascript/test.jsp">Test QUnit </a></li>							
 			</ul>				
 		</li>
 		
