@@ -16,6 +16,71 @@
     
   <script>
   	//Nuestro código de test
+  	
+  	QUnit.test( "Funciones predefinidas", function( assert ) {
+  		assert.ok( escape('Hola Mundo') == 'Hola%20Mundo'  , "'Hola Mundo' escapado");
+  		assert.ok( escape('Hóla Mundo') == 'H%F3la%20Mundo'  , "'Hóla Mundo' escapado");  		
+
+  		assert.ok((10 + "1") == "101" , "Sin parseInt 10 + \"1\" = 101");
+  		assert.ok((10 + parseInt("1")) == 11 , "Con parseInt 10 + \"1\" = 11");
+  		
+  		assert.ok(isNaN("123abc"), "123abc no es un número");
+  		assert.ok(!isNaN("123"), "123 sí es un número");  
+  		
+  	});
+  	
+  	QUnit.test( "Arrays", function( assert ) {
+  		var jonWaine = new Array ("Jon", "Waine",45);  		
+  		assert.ok(jonWaine[0] == "Jon" , "posicion 0 está 'Jon'");
+  		assert.ok(jonWaine[1] == "Waine" , "posicion 1 está 'Waine'");
+  		assert.ok(jonWaine[2] == 45 , "posicion 2 está 45");  		
+		assert.ok(jonWaine.length == 3 , "longitud del array == 3");
+		
+		//concat
+		var otrapeli = new Array("El feo el bueno y el malo",1973,"ni p. idea");
+		var arrayconcat = jonWaine.concat(otrapeli);
+  		assert.ok(arrayconcat[0] == "Jon" , "posicion 0 está 'Jon'");
+  		assert.ok(arrayconcat[1] == "Waine" , "posicion 1 está 'Waine'");
+  		assert.ok(arrayconcat[2] == 45 , "posicion 2 está 45");  	
+  		assert.ok(arrayconcat[3] == "El feo el bueno y el malo" , "posicion 0 está 'El feo el bueno y el malo'");
+  		assert.ok(arrayconcat[4] == 1973 , "posicion 1 está 1973");
+  		assert.ok(arrayconcat[5] == "ni p. idea" , "posicion 2 está 'ni p. idea'");  	
+  		assert.ok(arrayconcat.length == 6 , "longitud del array == 6");
+		
+		//join
+		var cadena=jonWaine.join("#");
+		assert.ok(cadena == "Jon#Waine#45" , "join # devuelve 'Jon#Waine#45'");
+
+		//reverse
+		var waineJon=jonWaine.reverse()
+ 		assert.ok(waineJon[0] == 45 , "posicion 0 está 45");
+  		assert.ok(waineJon[1] == "Waine" , "posicion 1 está 'Waine'");
+  		assert.ok(waineJon[2] == "Jon" , "posicion 2 está 'Jon'");  		
+		assert.ok(waineJon.length == 3 , "longitud del array == 3");
+		
+		//sort
+		var ordenado=jonWaine.sort();
+  		assert.ok(ordenado[0] == 45 , "posicion 0 ORDENADA está 45");
+  		assert.ok(ordenado[1] == "Jon" , "posicion 1 ORDENADA está 'Jon'");
+  		assert.ok(ordenado[2] == "Waine" , "posicion 2 ORDENADA está 'Waine'");  		
+		
+  		var arrayDesordenado=[-5,5,3,1,0];
+  		ordenado=arrayDesordenado.sort();
+  		assert.ok(ordenado[0] == -5 , "posicion 0 ORDENADA está -5");
+  		assert.ok(ordenado[1] ==  0 , "posicion 1 ORDENADA está 0");
+  		assert.ok(ordenado[2] ==  1 , "posicion 2 ORDENADA está 1");  		
+  		assert.ok(ordenado[3] ==  3 , "posicion 3 ORDENADA está 3");
+  		assert.ok(ordenado[4] ==  5 , "posicion 4 ORDENADA está 5");
+  		
+  		arrayDesordenado=["b","a","A","h"];
+  		ordenado=arrayDesordenado.sort();
+  		assert.ok(ordenado[0] == "A" , "posicion 0 ORDENADA está 'A'");
+  		assert.ok(ordenado[1] == "a" , "posicion 1 ORDENADA está 'a'");
+  		assert.ok(ordenado[2] == "b" , "posicion 2 ORDENADA está 'b'");
+  		assert.ok(ordenado[3] == "h" , "posicion 3 ORDENADA está 'h'");  		
+
+  		
+  	});
 
   	QUnit.test( "calcular_entrada(dia,edad)", function( assert ) {
  		
