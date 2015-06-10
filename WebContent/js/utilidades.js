@@ -50,6 +50,5 @@ function es_par(numero){
 	result=false;
 	
 	if ((numero%2)==0) result=true;
-//	else if (numero==null) result=true;
 	return result;
 }

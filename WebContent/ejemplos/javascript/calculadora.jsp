@@ -25,6 +25,10 @@ table td{
 	background-color: #0000FF;
 }
 
+#pantalla textarea{
+	width:280px;
+}
+
 </style>
 
 <section>
@@ -33,7 +37,10 @@ table td{
 			<h1>Calculadora en JavaScript</h1>
 		</header>
 		<div class="cnt_article">
-
+			<div id="pantalla">
+				<textarea></textarea>
+				
+			</div>
 			<table id="numeros" class="clearfix">
 				<tr>
 					<td data-key="number" data-value="1">1</td>
