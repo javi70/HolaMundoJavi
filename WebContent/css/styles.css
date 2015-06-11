@@ -622,3 +622,17 @@ header{100%;} /*copiado al profe */
 	color:orange;
 }
 
+.cnt_article{
+	padding:20px;
+	border:1px solid #cf5b89;
+}
+
+.cnt_article h2{
+	border-bottom: 1px solid #cf5b89;
+	margin-bottom: 10px;
+}
+
+.cnt_article ul{
+	list-style-type: none;
+	margin: 30px;
+}

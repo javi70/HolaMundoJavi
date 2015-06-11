@@ -45,9 +45,9 @@
 		  		assert.ok(arrayconcat[0] == "Jon" , "posicion 0 está 'Jon'");
 		  		assert.ok(arrayconcat[1] == "Waine" , "posicion 1 está 'Waine'");
 		  		assert.ok(arrayconcat[2] == 45 , "posicion 2 está 45");  	
-		  		assert.ok(arrayconcat[3] == "El feo el bueno y el malo" , "posicion 0 está 'El feo el bueno y el malo'");
-		  		assert.ok(arrayconcat[4] == 1973 , "posicion 1 está 1973");
-		  		assert.ok(arrayconcat[5] == "ni p. idea" , "posicion 2 está 'ni p. idea'");  	
+		  		assert.ok(arrayconcat[3] == "El feo el bueno y el malo" , "posicion 3 está 'El feo el bueno y el malo'");
+		  		assert.ok(arrayconcat[4] == 1973 , "posicion 4 está 1973");
+		  		assert.ok(arrayconcat[5] == "ni p. idea" , "posicion 5 está 'ni p. idea'");  	
 		  		assert.ok(arrayconcat.length == 6 , "longitud del array == 6");
 				
 				//join
@@ -62,7 +62,7 @@
 				assert.ok(waineJon.length == 3 , "longitud del array == 3");
 				
 				//sort
-				var ordenado=jonWaine.sort();
+				var ordenado=jonWaine.sort(); // jonWaine también quedaría ordenado al aplicarle sort
 		  		assert.ok(ordenado[0] == 45 , "posicion 0 ORDENADA está 45");
 		  		assert.ok(ordenado[1] == "Jon" , "posicion 1 ORDENADA está 'Jon'");
 		  		assert.ok(ordenado[2] == "Waine" , "posicion 2 ORDENADA está 'Waine'");  		
