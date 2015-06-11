@@ -20,7 +20,7 @@
 					<td colspan="4">Profe</td>
 				</tr>
 				<tr>
-					<td>Javier</td>
+					<td><del>Javier</del></td>
 					<td>Cristina</td>
 					<td>Jorge</td>
 					<td>Mihai</td>
@@ -32,7 +32,7 @@
 					<td>Javi</td>
 				</tr>
 				<tr>
-					<td>Jon</td>
+					<td><del>Jon</del></td>
 					<td>Raul</td>
 					<td>Jaione</td>
 					<td>David</td>

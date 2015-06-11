@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
 <!--  Custom IconMoon -->
 <link rel="stylesheet" href="fonts/iconmoon/style.css">
+<!--  QUnit -->
+<link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css">
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -35,7 +37,7 @@
 	
 	<header id="head">
 	  <div class="clearfix">
-		<div id="logo">
+		<div id="logo" class="fa-spin">
 			<a href="index.jsp"><img src="img/dado.jpg" alt="Volver a la home" /></a>
 		</div>
 		<h1>HTML5, CSS3 y JavaScript</h1>

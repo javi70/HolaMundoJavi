@@ -350,7 +350,7 @@ nav {
 	width: 100%;
 	font-family: Arial, Helvetica, sans-serif;
   	position: relative;
-  	left: 20%;	
+  	left: 15%;	
 }
 
 nav li{
@@ -420,11 +420,15 @@ header{100%;} /*copiado al profe */
 	z-index: 100; /* para que quede siempre por encima de todo */	
 }
 
-/* flotamos el logo y el h1 de la cabecera a la izda */
-#head #logo, #head h1{
+/* flotamos el logo a la izda */
+#head #logo{
 	float:left;
 }
 
+#head h1{
+	text-shadow: 3px -3px #54AEE3;
+	text-align: center;
+}
 
 #aside_home{
 /*	position:fixed;
@@ -562,14 +566,52 @@ header{100%;} /*copiado al profe */
 	background-position: -336px -84px;
 }
 
+
 /********************** FOOTER ************************************/
 
+#pie_general{
+	margin-top:5px;	
+	border-top:1px dotted black;
+	padding-top:20px;
+	padding-bottom:15px;	
+	font-size:20px;
+}
 
+.copy{
+	margin-left:50px;
+}
 
-/***** REDES SOCIALES CON AWESOMEFONTS ***************/
+#list_paginas{
+	padding:0px;
+	display:inline-block;
+}
+
+#list_paginas a{
+	color: #000;
+}
+
+#list_paginas li a:hover{
+	color:orange;
+}
+
+#list_paginas li{
+	list-style-type: none;
+    display: inline;
+    padding-right: 15px;
+}
+
 
 #list_rrss2{
-	list-style-type:none;
+	padding:0px;
+	display:inline-block;
+	margin-left:165px;
+}
+
+#list_rrss2 li{
+	list-style-type: none;
+    display: inline;
+	margin-right: 15px;
+	font-size:30px;
 }
 
 #list_rrss2 li a{
@@ -579,11 +621,4 @@ header{100%;} /*copiado al profe */
 #list_rrss2 li a:hover{
 	color:orange;
 }
-
-#list_rrss2 li{
-	float:right;
-	margin-right:20px;
-	font-size:35px;
-}
-
 

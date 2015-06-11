@@ -1,13 +1,13 @@
 </div> <!--  del content abierto al final de nav -->
 <footer id="pie_general">
-	<!--  queda fuera de la lista porque no es un enlace, se hace así por semántica  -->
-	<span class="copy">&copy;Ipartek Servicios Informáticos</span> 
-	
 	<!-- Lista de enlaces de páginas estáticas -->
 	<ul id="list_paginas">
 		<li><a href="#">Contacto</a></li>
 		<li><a href="#">Aviso Legal</a></li>
 	</ul>
+
+	<!--  queda fuera de la lista porque no es un enlace, se hace así por semántica  -->
+	<span class="copy">&copy;Ipartek Servicios Informáticos</span> 
 	
 	<!--  Lista de enlaces para redes sociales con awesomefonts -->
 	<ul id="list_rrss2">
@@ -28,7 +28,7 @@
 <script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 
 <!--  Convertir todos los textareas en TinyMce -->
-<script src="js/tinymce/tinymce.minjs"></script>
+<script src="js/tinymce/tinymce.min.js"></script>
 <script>tinymce.init({selector:'textarea'});</script>
 
 <!--  Custom JavaScript después de cargar nuestras librerías -->

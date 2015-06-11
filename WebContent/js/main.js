@@ -9,5 +9,5 @@
 	 console.debug('document ready!');
 	 
     //$( "#lista_select" ).combobox();
-    $('#select').filterByText($('#textbox'), false);
+   // $('#select').filterByText($('#textbox'), false);
   });

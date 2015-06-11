@@ -1,12 +1,15 @@
 <jsp:include page="/plantillas/head.jsp"></jsp:include>
 <jsp:include page="/plantillas/nav.jsp"></jsp:include>
-<script src="../../js/utilidades.js"></script>
+
+<script src="js/utilidades.js"></script>
+		
 <section>
 	<article>
 		<header>
 			<h1>Variables en JavaScript</h1>
 		</header>
 		<div class="cnt_article">
+
 			<script>
 			
 				//declaracion de variables globales
@@ -204,6 +207,7 @@
 				document.write('Jueves - 17 años: '+calcular_entrada('Jueves',17)+'€<br>');	
 				//habría que ir testeando todos los casos posibles y que siempre salga true
 				console.info(' Lunes < 35 años = 2€' +(calcular_entrada('Lunes',34)==2));
+				
 			</script>
 		</div>
 		<footer>	
