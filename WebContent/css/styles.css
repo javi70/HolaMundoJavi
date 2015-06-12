@@ -20,7 +20,8 @@ P {
 }
 
 body {
-	background: url('../img/fondo.jpg');
+/*	background: url('../img/fondo.jpg');*/
+	background-image: url('../img/fondo.jpg');
 	font-family: arial; /* para que todas las p�ginas tengan arial */
 }
 
@@ -630,6 +631,8 @@ header{100%;} /*copiado al profe */
 .cnt_article h2{
 	border-bottom: 1px solid #cf5b89;
 	margin-bottom: 10px;
+	text-align: left;
+	color:red;
 }
 
 .cnt_article ul{

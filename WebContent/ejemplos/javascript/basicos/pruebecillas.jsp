@@ -1,8 +1,15 @@
 <jsp:include page="/plantillas/head.jsp"></jsp:include>
 <jsp:include page="/plantillas/nav.jsp"></jsp:include>
 
-<script src="js/utilidades.js"></script>
-		
+<script>
+	window.onresize=function(){
+		window.resizeTo(640,480);
+	}
+	window.onclick=function(){
+		window.resizeTo(640,480);
+	}
+	
+</script>		
 <section>
 	<article>
 		<header>

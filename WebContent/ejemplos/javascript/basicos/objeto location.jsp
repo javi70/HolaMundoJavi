@@ -200,7 +200,8 @@ body {
 					mensaje+=imagenes[i].src + "\n";
 					if(i==5) break; //para que solo muestre las 6 primeras
 				}
-				span_images.innerHTML=span_images.innerHTML+'<br/> src: '+mensaje;
+				//alert(mensaje);
+			
 			
 				//links
 				var span_links=document.getElementById('d_links');
