@@ -29,7 +29,6 @@
 
 <!--  Convertir todos los textareas en TinyMce -->
 <script src="js/tinymce/tinymce.min.js"></script>
-<script>tinymce.init({selector:'textarea'});</script>
 
 <!--  Custom JavaScript después de cargar nuestras librerías -->
 <script src="js/main.js"></script>
