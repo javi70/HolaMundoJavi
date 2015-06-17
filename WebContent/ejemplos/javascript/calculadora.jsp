@@ -36,7 +36,7 @@
 }
 
 #calculadora #pantalla{
-	width: 253px;
+	width: 228px;
     border: 2px solid #000000;
 	border-radius:10px 10px 10px 10px;    
     height: 30px;

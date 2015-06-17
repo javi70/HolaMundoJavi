@@ -150,7 +150,8 @@ body {
 					<li><strong>sub():</strong><span id="str_sub"></span></li>
 					<li><strong>charAt(5):</strong><span id="str_charat"></span></li>
 					<li><strong>fontColor("#556677"):</strong><span id="str_fontcolor"></span></li>
-					<li><strong>fontSize(5):</strong><span id="str_fontsize"></span></li>				
+					<li><strong>fontSize(5):</strong><span id="str_fontsize"></span></li>	
+					<li><strong>split():</strong><span id="str_split"></span></li>			
 				</ul>
 
 			<h2>Date</h2>
@@ -285,7 +286,7 @@ body {
 			/*String*/
 				var cadena='Ejemplo de Busqueda';
 				document.getElementById('str_indexof').innerHTML=cadena.indexOf('de',1);
-				document.getElementById('str_lastindexof').innerHTML=cadena.lastIndexOf('de',0);
+				document.getElementById('str_lastindexof').innerHTML=cadena.lastIndexOf('de',1);
 				document.getElementById('str_substring').innerHTML=cadena.substring(2,4);
 				document.getElementById('str_link').innerHTML=cadena.link();
 				document.getElementById('str_tolower').innerHTML=cadena.toLowerCase();
@@ -299,7 +300,8 @@ body {
 				document.getElementById('str_sub').innerHTML=cadena.sub();
 				document.getElementById('str_charat').innerHTML=cadena.charAt(5);
 				document.getElementById('str_fontcolor').innerHTML=cadena.fontcolor('#556677');
-				document.getElementById('str_fontsize').innerHTML=cadena.fontsize(5);	
+				document.getElementById('str_fontsize').innerHTML=cadena.fontsize(5);
+				document.getElementById('str_split').innerHTML=cadena.split(' ');
 			</script>
 		</div>
 		<footer>	

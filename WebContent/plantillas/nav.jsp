@@ -90,8 +90,7 @@
 					<ul>
 						<li><a href="ejemplos/javascript/basicos/variables.jsp">Variables</a></li>
 						<li><a href="ejemplos/javascript/basicos/objetos.jsp">Objetos</a></li>
-						<li><a href="ejemplos/javascript/basicos/date.jsp">Date</a></li>
-																	
+						<li><a href="ejemplos/javascript/basicos/date.jsp">Date</a></li>						
 					</ul>								
 				<li><a href="ejemplos/javascript/eventos.jsp">Eventos</a></li>
 				<li><a href="ejemplos/javascript/calculadora.jsp">Calculadora</a></li>	

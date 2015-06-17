@@ -79,7 +79,7 @@
 			<div class="clearfix cnt_cols"> <!--  es clearfix pq tendra cosas flotando -->
 				<div class="col1">
 					<textarea id="txt" cols="20" rows="20"></textarea>
-				
+					<input type="button" id="boton_copiar" value="Copiar contenido">				
 				</div>
 				<div class="col2">
 					<input type="button" id="boton" value="pulsame">
@@ -89,11 +89,12 @@
 						<option value="bar">Barakaldo</option>
 					</select>
 					<input type="text" id="cuadro_texto"/>
-					<p>Sexo:<br/>
+					<fieldset>
+						<legend>Sexo:</legend>
 						<input type="radio" name="sex" value="H" checked="checked">Masculino
 						<input type="radio" name="sex" value="M">Femenino
-						<input type="radio" name="sex" value="I">Indeterminado
-					</p>		
+						<input type="radio" name="sex" value="I">Indeterminado						
+					</fieldset>
 					<fieldset>
 						<legend>Conocimientos</legend>
 			
@@ -104,7 +105,7 @@
 					
 				</div>
 			</div>	
-			
+
 			<script>
 				//buscar objetos por su ID
 				var txt=document.getElementById('txt');
@@ -140,34 +141,54 @@
 				};
 				
 				//al cambiar el sexo se refleja en el cuadro de eventos
-				var sexos=document.getElementsByName('sex');
-				for(var x=0;x<sexos.length;x++){
-					console.debug('sexo '+x);
-					sexos[x].onselect=function(event){
-						console.debug('sexo cambiado');
-						txt.value+=sexos[x].value+'\n';
+				var sexos=document.getElementsByName('sex');				//recorro todos los elementos para asociarle el listener a cada uno
+				var nombreGenero=null;
+				var sexoM=null;
+				
+				var referencia_funcion_cambio_sexo=function cambio_sexo(){
+					for(var x=0;x<sexos.length;x++){
+						if (sexos[x].checked) {
+							console.debug('sexo cambiado');
+							sexoM=sexos[x].value.toUpperCase(); //paso el sexo a mayusculas por si acaso
+							if(sexoM=='H')nombreGenero="Hombre"
+							else if(sexoM=='M')nombreGenero="Mujer"
+							else nombreGenero="Indeterminado";
+							txt.value+='Sexo cambiado a ('+sexos[x].value+') '+nombreGenero+'\n';
+				        }
 					}
 				}
-/*				sexos.onselect=function (event){
-					console.debug('onselect sexo');
-					for(var i=0;i<sexos.length;i++){
-				    	if(sexos[i].checked)
-				           	txt.value+=sexos[i].value+'\n';
-				    }
-					
-				//	txt.value+='Sexo cambiado a ('+document.getElementByClass('radio_sexo').value+') '+documet.getElementByClass('radio_sexo').text+'\n';
-				};*/
-				
-				
+				for (i=0; i<sexos.length; i++){
+					sexos[i].addEventListener("click",referencia_funcion_cambio_sexo);									
+				}
+							
 				// al ir chequeando conocimientos aparecen en el cuadro de eventos
 				conocimientos=document.getElementsByName('conocimientos');
-				conocimientos.onselect=function(event){
-					console.debug('Seleccionado conocimiento');
+				
+				var referencia_funcion_conocimientos=function cambio_conocimientos(){
+					for(var x=0;x<conocimientos.length;x++){
+						console.debug('conocimiento cambiado');						
+						if (conocimientos[x].checked)
+							txt.value+='Chequeado conocimiento '+conocimientos[x].value+'\n';
+						else
+							txt.value+='Deschequeado conocimiento '+conocimientos[x].value+'\n';
+				     }
+					}					
+				
+				for (i=0; i<conocimientos.length; i++){
+					conocimientos[i].addEventListener("click",referencia_funcion_conocimientos);									
 				}
+				
+				//boton copiar contenido 
+				// la seleccion funciona bien, el copiar al portapapeles en IE, en Chrome no ni en Firefox
+				btn_copiar=document.getElementById('boton_copiar');
+				btn_copiar.onclick=function( event ){
+					txt.select();
+					window.clipboardData.setData("Text", txt.value);
+				};				
 			</script>
 		</div>
 		<footer>
-			Capitulo 14; si referencia
+			Capitulo 14; sin referencia
 		</footer>				
 	</article>	
 </section>
