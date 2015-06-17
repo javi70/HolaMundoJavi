@@ -78,10 +78,12 @@
 		<div class="cnt_article">
 			<div class="clearfix cnt_cols"> <!--  es clearfix pq tendra cosas flotando -->
 				<div class="col1">
-					<textarea id="txt" cols="20" rows="20"></textarea>
+					<textarea id="txt" cols="40" rows="20"></textarea>
 					<input type="button" id="boton_copiar" value="Copiar contenido">				
 				</div>
 				<div class="col2">
+				
+				  <form action="#" method="post" onsubmit="validar(this);return false" name="formulario">
 					<input type="button" id="boton" value="pulsame">
 					<input type="button" id="clear" value="Limpiar">
 					<select id="selec">
@@ -91,23 +93,93 @@
 					<input type="text" id="cuadro_texto"/>
 					<fieldset>
 						<legend>Sexo:</legend>
-						<input type="radio" name="sex" value="H" checked="checked">Masculino
-						<input type="radio" name="sex" value="M">Femenino
-						<input type="radio" name="sex" value="I">Indeterminado						
+						<input data-label="hombre" type="radio" name="sex" value="H">Masculino
+						<input data-label="mujer" type="radio" name="sex" value="M">Femenino
+						<input data-label="indeterminado" type="radio" name="sex" value="I" checked="checked">Indeterminado						
 					</fieldset>
 					<fieldset>
 						<legend>Conocimientos</legend>
 			
-						<input type="checkbox" name="conocimientos" value="0" checked="checked">HTML<br/>
+						<input type="checkbox" name="conocimientos" value="0">HTML<br/>
 						<input type="checkbox" name="conocimientos" value="1">JavaScript<br/>
-						<input type="checkbox" name="conocimientos" value="2" checked="checked">CSS<br/>
-					</fieldset>					
+						<input type="checkbox" name="conocimientos" value="2">CSS<br/>
+					</fieldset>	
 					
-				</div>
-			</div>	
+					<!--  botones -->
+					<input type="submit" value="Guardar">
+					<input type="reset" value="Limpiar">
+				<div id="errores"></div>														
+				  </form>
+				</div> <!--  col2 -->
+
+			</div> <!--  cnt_cols -->	
 
 			<script>
 				//buscar objetos por su ID
+
+				/* aplicar estilos al div errores */
+				var errores=document.getElementById('errores');
+				errores.style.backgroundColor='red';
+/*				errores.style.width='1200px';
+				errores.style.left='0';
+	*/			
+				
+				/**
+					Validacion del formulario
+					Si retorno true se submita
+					Si retorno false NO se submita
+				*/
+				function validar(formulario){
+					var resul=false;
+					var mensaje='';
+
+					errores.innerHTML='';
+					if(!confirm('Desea enviar el formulario?')){
+						errores.innerHTML='Envio cancelado';
+						return false;
+						
+					}
+					//TODO validar nosotros el formulario
+					
+					if(formulario.cuadro_texto.value.length<5){
+						mensaje+="El cuadro de texto tiene menos de 5 caracteres<br/>";
+						formulario.cuadro_texto.style.backgroundColor='red';
+					}
+					if(formulario.cuadro_texto.value.length>255){
+						mensaje+="El cuadro de texto tiene mas de 255 caracteres<br/>";
+						formulario.cuadro_texto.style.backgroundColor='red';
+					}
+					if(formulario.sex.value=='H'){ //sexo Hombre, debe tener al menos 1 conocimiento
+						var conoce=false;
+						for(i=0;i<formulario.conocimientos.length;i++){
+							if(formulario.conocimientos[i].checked){
+								conoce=true;
+								break
+							}
+						}
+						if(!conoce)mensaje+="Siendo hombre deberia tener al menos 1 conocimiento<br/>";
+					}
+					if(formulario.sex.value=='M'){ //sexo Mujer, debe tener al menos 2 conocimientos
+						var conoce1=false;
+						var conoce2=false;
+						for(i=0;i<formulario.conocimientos.length;i++){
+							if(formulario.conocimientos[i].checked)conoce1=true;
+							if((formulario.conocimientos[i].checked)&&(conoce1)){
+								conoce2=true;
+								break;
+							}
+							
+						}
+						if(!conoce2)mensaje+="Siendo mujer deberia tener al menos 2 conocimientos<br/>";
+					}
+					errores.innerHTML=mensaje;
+					//Si todo es correcto submitar el formulario
+					if(mensaje=='')resul=true;
+					if(resul)formulario.submit();
+					else return resul;
+				}
+				
+				
 				var txt=document.getElementById('txt');
 				var boton=document.getElementById('boton');
 				var selec=document.getElementById('selec');
@@ -145,7 +217,7 @@
 				var nombreGenero=null;
 				var sexoM=null;
 				
-				var referencia_funcion_cambio_sexo=function cambio_sexo(){
+/*				var referencia_funcion_cambio_sexo=function cambio_sexo(){
 					for(var x=0;x<sexos.length;x++){
 						if (sexos[x].checked) {
 							console.debug('sexo cambiado');
@@ -160,10 +232,26 @@
 				for (i=0; i<sexos.length; i++){
 					sexos[i].addEventListener("click",referencia_funcion_cambio_sexo);									
 				}
+				/*
+				SOLUCION DE RAUL
+				for(i=0; i<sexo.length; i++) {
+					sexo[i].onchange = function(event) {
+						txt.value += 'Has cambiado a (' + this.value + ') ' + this.nextElementSibling.innerHTML + '\n';
+					}
+				}				
+				TAMBIEN SE PODRIA USAR CON DATA-LABEL
+				*/
+				for(i=0; i<sexos.length; i++) {
+					sexos[i].onchange = function(event) {
+						var label=this.dataset.label;
+						txt.value += 'Has cambiado a (' + this.value + ') ' + label + '\n';
+					}
+				}				
 							
 				// al ir chequeando conocimientos aparecen en el cuadro de eventos
-				conocimientos=document.getElementsByName('conocimientos');
 				
+				conocimientos=document.getElementsByName('conocimientos');
+/*				
 				var referencia_funcion_conocimientos=function cambio_conocimientos(){
 					for(var x=0;x<conocimientos.length;x++){
 						console.debug('conocimiento cambiado');						
@@ -173,18 +261,32 @@
 							txt.value+='Deschequeado conocimiento '+conocimientos[x].value+'\n';
 				     }
 					}					
-				
 				for (i=0; i<conocimientos.length; i++){
 					conocimientos[i].addEventListener("click",referencia_funcion_conocimientos);									
 				}
-				
+*/				
 				//boton copiar contenido 
 				// la seleccion funciona bien, el copiar al portapapeles en IE, en Chrome no ni en Firefox
 				btn_copiar=document.getElementById('boton_copiar');
 				btn_copiar.onclick=function( event ){
 					txt.select();
 					window.clipboardData.setData("Text", txt.value);
-				};				
+				};
+				
+				/*
+				SOLUCION DE RAUL
+				*/
+				for(i=0; i<conocimientos.length; i++) {
+					conocimientos[i].onchange = function(event) {
+						if(this.checked) {
+							txt.value += 'Has activado (' + this.value + ') ' + this.nextElementSibling.innerHTML + '\n';
+						} else {
+							txt.value += 'Has desactivado (' + this.value + ') ' + this.nextElementSibling.innerHTML + '\n';
+						}
+												
+					}
+				}
+				
 			</script>
 		</div>
 		<footer>

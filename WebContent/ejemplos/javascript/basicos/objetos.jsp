@@ -301,7 +301,11 @@ body {
 				document.getElementById('str_charat').innerHTML=cadena.charAt(5);
 				document.getElementById('str_fontcolor').innerHTML=cadena.fontcolor('#556677');
 				document.getElementById('str_fontsize').innerHTML=cadena.fontsize(5);
-				document.getElementById('str_split').innerHTML=cadena.split(' ');
+
+				var lista="<ol>";
+				for(i=0;i<cadena.split(' ').length;i++)lista+="<li>"+cadena.split(' ')[i]+"</li>";
+				lista+="</ol>";
+				document.getElementById('str_split').innerHTML=cadena.split(' ')+"\n"+lista;				
 			</script>
 		</div>
 		<footer>	

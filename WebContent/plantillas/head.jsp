@@ -4,7 +4,9 @@
 
 <head>
 
-<base href="/HolaMundoJavi/">
+<!-- Para poner la base del proyecto de forma dinámica -->
+<base href="<%=request.getContextPath()%>/">
+
 <meta charset="utf-8">
 
 <title>Mi primera pagina WEB</title>
