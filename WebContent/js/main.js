@@ -9,7 +9,7 @@
 	 console.debug('document ready!');
 	 
 	 console.warn('tinymce deshabilitado');
-	//tinymce.init({selector:'textarea'});
+	tinymce.init({selector:'textarea.curriculum'});
  
 	 
 	 /* Inicialización en español para la extensión 'UI date picker' para jQuery. */

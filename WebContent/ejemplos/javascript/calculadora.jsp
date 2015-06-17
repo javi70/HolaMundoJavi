@@ -4,7 +4,7 @@
 <style>
 
 #calculadora{
-	margin:0 278px;
+	margin:0 230px;
 }
 
 #calculadora table{
@@ -26,6 +26,10 @@
 	margin-right:30px;
 }
 
+#calculadora #operaciones{
+	float:left;	
+}
+
 #calculadora td:hover{
 	background-color: #FFFFFF;	
 	cursor:pointer; /* para que aparezca la flechita del ratón*/
@@ -36,7 +40,7 @@
 }
 
 #calculadora #pantalla{
-	width: 228px;
+	width: 305px;
     border: 2px solid #000000;
 	border-radius:10px 10px 10px 10px;    
     height: 30px;
@@ -54,9 +58,9 @@
 			<h1>Calculadora en JavaScript</h1>
 		</header>
 		<div class="cnt_article">
-		 <div id="calculadora">
+		 <div id="calculadora"  class="clearfix">
 			<div id="pantalla">0</div>
-			<table id="numeros" class="clearfix">
+			<table id="numeros">
 				<tr>
 					<td data-key="number" data-value="1" onClick="escribir(1);">1</td>
 					<td data-key="number" data-value="2" onClick="escribir(2);">2</td>
@@ -73,27 +77,30 @@
 					<td data-key="number" data-value="9" onClick="escribir(9);">9</td>				
 				</tr>
 				<tr>
-					<td data-key="number" data-value="0" colspan="3" onClick="escribir(0);">0</td>
+					<td data-key="number" data-value="0" colspan="2" onClick="escribir(0);">0</td>
+					<td data-key="number" data-value="." onClick="escribir('.');">.</td>
 				</tr>
 			</table>
 			
 			<table id="operaciones">
+				<tr>					
+					<td data-key="operator" data-value="C" onClick="borrar();">C</td>
+					<td data-key="operator" data-value="%" onClick="escribir('%');">%</td>
+					<td data-key="operator" data-value="(" onClick="escribir('(');">(</td>
+				</tr>
 				<tr>
 					<td data-key="operator" data-value="+" onClick="escribir('+');">+</td>
 					<td data-key="operator" data-value="-" onClick="escribir('-');">-</td>
+					<td data-key="operator" data-value=")" onClick="escribir(')');">)</td>
 				</tr>
 				<tr>
 					<td data-key="operator" data-value="/" onClick="escribir('/');">/</td>
-					<td data-key="operator" data-value="%" onClick="escribir('%');">%</td>
-				</tr>
-				<tr>
 					<td data-key="operator" data-value="*" onClick="escribir('*');">*</td>
-					<td data-key="operator" data-value="C" onClick="borrar();">C</td>
+					<td data-key="operator" data-value="espar)" onClick="espar();">es par</td>
 				</tr>
 				<tr>
-					<td data-key="operator" data-value="=" colspan="2" onClick="calcular();">=</td>
+					<td data-key="operator" data-value="=" colspan="3" onClick="calcular();">=</td>
 				</tr>				
-				
 			</table>
 		  </div> <!--  calculadora -->
 		</div> <!--  cnt_article -->
@@ -112,7 +119,7 @@
  	*/
 	function escribir(valor){
  		if ($('#pantalla').text()=='0') $('#pantalla').text(valor);
- 		else $('#pantalla').text($('#pantalla').text()+valor);			
+ 		else $('#pantalla').text($('#pantalla').text()+valor); 
 	}
 	
  	/**
@@ -131,6 +138,18 @@
 	*/
 	function calcular(){
 		$('#pantalla').text(eval($('#pantalla').text()));		
+	}
+	
+	
+ 	/**
+		evalúa y muestra en  #pantalla si lo que contuviera #pantalla es par
+		@param: no usa parámetros
+		@return: no devuelve nada
+	*/
+	function espar(){
+		var numero=parseInt($('#pantalla').text());
+		if((numero%2)==0)$('#pantalla').text('Es par');
+		else $('#pantalla').text('Es impar');
 	}
 	
 </script>

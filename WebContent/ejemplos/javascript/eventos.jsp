@@ -107,23 +107,21 @@
 					
 					<!--  botones -->
 					<input type="submit" value="Guardar">
-					<input type="reset" value="Limpiar">
-				<div id="errores"></div>														
+					<input type="reset" value="Limpiar" onclick="limpiar(this)">
+																		
 				  </form>
 				</div> <!--  col2 -->
-
+			<div id="errores"></div>
 			</div> <!--  cnt_cols -->	
 
 			<script>
-				//buscar objetos por su ID
-
-				/* aplicar estilos al div errores */
-				var errores=document.getElementById('errores');
-				errores.style.backgroundColor='red';
-/*				errores.style.width='1200px';
-				errores.style.left='0';
-	*/			
-				
+				function limpiar(formulario){
+					var errores=document.getElementById('errores');
+					errores.innerHTML='';
+					errores.style.visibility='hidden';					
+					formulario.reset();
+				}
+					
 				/**
 					Validacion del formulario
 					Si retorno true se submita
@@ -133,14 +131,20 @@
 					var resul=false;
 					var mensaje='';
 
+					/* aplicar estilos al div errores */
+					var errores=document.getElementById('errores');
+					errores.style.backgroundColor='#FF8824';
+					errores.style.visibility='visible';	
+					errores.style.float='left';
+					errores.style.width='100%';
+					errores.style.padding='10px';
+					
 					errores.innerHTML='';
 					if(!confirm('Desea enviar el formulario?')){
 						errores.innerHTML='Envio cancelado';
-						return false;
-						
+						return false;						
 					}
-					//TODO validar nosotros el formulario
-					
+							
 					if(formulario.cuadro_texto.value.length<5){
 						mensaje+="El cuadro de texto tiene menos de 5 caracteres<br/>";
 						formulario.cuadro_texto.style.backgroundColor='red';
@@ -149,37 +153,29 @@
 						mensaje+="El cuadro de texto tiene mas de 255 caracteres<br/>";
 						formulario.cuadro_texto.style.backgroundColor='red';
 					}
-					if(formulario.sex.value=='H'){ //sexo Hombre, debe tener al menos 1 conocimiento
-						var conoce=false;
-						for(i=0;i<formulario.conocimientos.length;i++){
-							if(formulario.conocimientos[i].checked){
-								conoce=true;
-								break
-							}
-						}
-						if(!conoce)mensaje+="Siendo hombre deberia tener al menos 1 conocimiento<br/>";
+
+					var numConocimientos=0;
+					for(i=0;i<formulario.conocimientos.length;i++){
+						if(formulario.conocimientos[i].checked)numConocimientos++;
 					}
-					if(formulario.sex.value=='M'){ //sexo Mujer, debe tener al menos 2 conocimientos
-						var conoce1=false;
-						var conoce2=false;
-						for(i=0;i<formulario.conocimientos.length;i++){
-							if(formulario.conocimientos[i].checked)conoce1=true;
-							if((formulario.conocimientos[i].checked)&&(conoce1)){
-								conoce2=true;
-								break;
-							}
-							
-						}
-						if(!conoce2)mensaje+="Siendo mujer deberia tener al menos 2 conocimientos<br/>";
+					
+					if((formulario.sex.value=='H')&(numConocimientos<1)){ //sexo Hombre, debe tener al menos 1 conocimiento
+						mensaje+="Siendo hombre deberia tener al menos 1 conocimiento<br/>";
 					}
+					if((formulario.sex.value=='M')&(numConocimientos<2)){ //sexo Mujer, debe tener al menos 2 conocimientos
+						mensaje+="Siendo mujer deberia tener al menos 2 conocimientos<br/>";
+					}
+
 					errores.innerHTML=mensaje;
 					//Si todo es correcto submitar el formulario
 					if(mensaje=='')resul=true;
 					if(resul)formulario.submit();
 					else return resul;
-				}
+				} // fin de validacion del formulario +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 				
 				
+				//buscar objetos por su ID
+
 				var txt=document.getElementById('txt');
 				var boton=document.getElementById('boton');
 				var selec=document.getElementById('selec');

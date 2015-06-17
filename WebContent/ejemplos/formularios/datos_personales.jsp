@@ -89,10 +89,8 @@
 	
 	<fieldset>
 	<legend>CV</legend>
-			<script src="js/tinymce/tinymce.min.js"></script>
-			<script>tinymce.init({selector:'textarea'});</script>			
 
-			<textarea name="cv" id="cv" cols="60" rows="10" placeholder="Introduce tu curriculum en texto plano (minimo 20 lineas)"></textarea>
+			<textarea name="cv" id="cv" cols="60" rows="10" placeholder="Introduce tu curriculum en texto plano (minimo 20 lineas)" class="curriculum"></textarea>
 			
 	</fieldset>
 		
