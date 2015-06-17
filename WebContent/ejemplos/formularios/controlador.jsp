@@ -10,4 +10,4 @@
 	out.print("Te llamas "+ nombre +"<br/> y tu password es "+pass);
 
 %>
-<jsp:include page="/plantillas/footer.jsp"></jsp:include>
+<jsp:include page="/plantillas/foot.jsp"></jsp:include>

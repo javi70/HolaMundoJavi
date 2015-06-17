@@ -122,4 +122,4 @@
 	</article>
 </section>
 </div> <!-- tabla_avanzada -->
-<jsp:include page="/plantillas/footer.jsp"></jsp:include>
+<jsp:include page="/plantillas/foot.jsp"></jsp:include>

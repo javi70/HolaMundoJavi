@@ -71,4 +71,4 @@
 <footer>
 	<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome</a>
 </footer>
-<jsp:include page="/plantillas/footer.jsp"></jsp:include>
+<jsp:include page="/plantillas/foot.jsp"></jsp:include>
