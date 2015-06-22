@@ -22,7 +22,7 @@
 				<tr>
 					<td><del>Javier</del></td>
 					<td>Cristina</td>
-					<td>Jorge</td>
+					<td><del>Jorge</del></td>
 					<td>Mihai</td>
 				</tr>
 				<tr>

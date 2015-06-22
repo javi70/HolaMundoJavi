@@ -14,6 +14,9 @@
 <meta name="description" content="Mi primera pagina en HTML5">
 <meta name="author" content="Javi">
 
+<!-- ViewPort imprescindible para RWD (Responsive Web Design) -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -25,9 +28,14 @@
 <link rel="stylesheet" href="fonts/iconmoon/style.css">
 <!--  QUnit -->
 <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css">
+
+<!-- http://responsive-nav.com/ -->
+<link rel="stylesheet" href="js/responsive-nav/responsive-nav.css">
+
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
 
 </head>
 

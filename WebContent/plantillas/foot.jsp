@@ -18,6 +18,12 @@
 	</ul>		
 </footer>
 
+<!-- boton para ir hasta arriba de la pagina -->
+<nav id="nav_top">
+	<a href="<%=request.getRequestURL()%>#container" title="Ir a inicio pagina">
+		<i class="fa fa-arrow-circle-up fa-4x"></i>
+	</a>
+</nav>
 
 </div>	<!-- container -->
 
@@ -30,7 +36,10 @@
 <!--  Convertir todos los textareas en TinyMce -->
 <script src="js/tinymce/tinymce.min.js"></script>
 
-<!--  Custom JavaScript despuÃ©s de cargar nuestras librerÃ­as -->
+<!-- http://responsive-nav.com/ -->
+<script src="js/responsive-nav/responsive-nav.min.js"></script>
+
+<!--  Custom JavaScript después de cargar nuestras librerías -->
 <script src="js/main.js"></script>
 
 </body>
