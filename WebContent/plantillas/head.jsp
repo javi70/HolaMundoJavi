@@ -49,7 +49,7 @@
 	
 	<header id="head">
 	  <div class="clearfix">
-		<div id="logo" class="fa-spin">
+		<div id="logo">
 			<a href="index.jsp"><img src="img/dado.jpg" alt="Volver a la home" /></a>
 		</div>
 		<h1>HTML5, CSS3 y JavaScript</h1>

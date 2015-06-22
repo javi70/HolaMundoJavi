@@ -16,14 +16,17 @@
 		<li><a href="http://www.youtube.com" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
 		<li><a href="http://www.instagram.com" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
 	</ul>		
+
+	<!-- boton para ir hasta arriba de la pagina -->
+	<nav id="nav_top">
+		<a href="<%=request.getRequestURL()%>#container" title="Ir a inicio pagina">
+			<i class="fa fa-arrow-circle-up fa-4x"></i>
+		</a>
+	</nav>
+
 </footer>
 
-<!-- boton para ir hasta arriba de la pagina -->
-<nav id="nav_top">
-	<a href="<%=request.getRequestURL()%>#container" title="Ir a inicio pagina">
-		<i class="fa fa-arrow-circle-up fa-4x"></i>
-	</a>
-</nav>
+
 
 </div>	<!-- container -->
 
@@ -39,7 +42,7 @@
 <!-- http://responsive-nav.com/ -->
 <script src="js/responsive-nav/responsive-nav.min.js"></script>
 
-<!--  Custom JavaScript después de cargar nuestras librerías -->
+<!--  Custom JavaScript despuï¿½s de cargar nuestras librerï¿½as -->
 <script src="js/main.js"></script>
 
 </body>

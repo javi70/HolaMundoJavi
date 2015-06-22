@@ -193,9 +193,6 @@ nav {
 /*	margin-top:200px;*/	
 }
 
-#home{
-	width:100%; /* RWD */
-}
 
 #aside_home{
 /*	position:fixed;
@@ -733,33 +730,72 @@ header{100%;} /*copiado al profe */
 		height: 45px;
 	}
 
-	#head{
-		width: 100%;
-	}
-	
-	nav {
-		width: 100%;
-	}
-	
-	#content{
-		width:100%;
-	}
-	
 	#container {
-		width:100%; /* RWD */
-	}
-	
-	
-	
-	#home{
 		width:100%;
 	}
+
+		#head{
+			width: 100%;
+		}
 	
-	#aside_home{
-		width:100%;		
+			nav {
+				width: 100%;
+			}
+		
+		#content{
+			width:100%;
+		}
+		
+			#home{
+				width:100%;
+			}
+		
+			#aside_home{
+				width:100%;		
+			}
+		
+		#pie_general{
+			width:100%;
+		}
+		
+		
+	h1{
+		margin-bottom: 2.22%;
 	}
 	
-	#pie_general{
-		width:100%;
+	h2{
+		margin-bottom:1.66%;
+	}
+
+	ol h3, ul h3 { 
+		margin-bottom: 1.66%;
+	}
+	
+	li {
+		margin-bottom: 0.88%;
+	}
+
+	ol ol, ul ul { 
+		margin-left: 2.22%;
+	}
+
+	fieldset{
+		padding: 2.22% 3.33%;
+		margin-bottom: 2.22%;
+	}
+
+	article{
+		padding: 2.22%;
+		margin-bottom: 2.77%;
+	}
+	
+	article h1{
+		font-size: 25px;
+		padding: 0.55% 0;	
+	}
+	
+	#pie_general{	
+		padding-top:0;
+		margin-top:0;
 	}
 }
