@@ -720,15 +720,17 @@ header{100%;} /*copiado al profe */
 		font-size:1.2em;
 		text-align:left;
 	}
-
+	
+	nav #menu { display:none; }
+	
 	#nav_top{
 		display:inline;
 		position:fixed;
 		z-index:5;
-		bottom:10px;
-		right:10px;
-		width: 45px;
-		height: 45px;
+		bottom:20px;
+		right:-234px;
+		width: 42px;
+		height: 42px;
 	}
 
 	#container {
@@ -745,6 +747,7 @@ header{100%;} /*copiado al profe */
 		
 		#content{
 			width:100%;
+			padding-top:70px;			
 		}
 		
 			#home{
@@ -752,7 +755,7 @@ header{100%;} /*copiado al profe */
 			}
 			
 				#home section{
-					width: 80%;
+					width: 100%;				
 				}
 				
 					#home section h1{
@@ -761,28 +764,66 @@ header{100%;} /*copiado al profe */
 						text-align: center;
 					}
 					
+					#cnt_dado { width:100%; }
+					
+					#dado_afortunado { 
+						float:none;
+						width: 100%;
+					}
+					
 					.numero{
 						display:none;
 					}
 					
+					#tabla_dado{
+						width:90%;
+						margin-bottom:20px;
+					}
+					
 					.tabla_azul{
 						font-size: 1em;
+						width:100%;
 					}
 
 					.tabla_azul th, .tabla_azul td {
 						padding: 5px;
 					}
-	
-		
+			
 			#aside_home{
-				width:80%;		
+				width:80%;	
+				font-size:1.2em;	
 			}
 		
 		#pie_general{
 			width:100%;
+			margin-top:10px;
+			border-top: 1px dotted black;
+			font-size:1em;
 		}
 		
-		
+			.copy { width:100%; }
+
+			#list_paginas{display:block;}
+				#list_paginas li{
+				    display: block;
+				    padding-right: 0;
+				    width:100%;
+				    text-align: center;
+				}			
+				
+			#list_rrss2{
+			    width:95%;
+			    text-align: center;
+				margin-left:0;
+				margin-top:10px;
+			}
+
+				#list_rrss2 li{
+				    display: inline;
+					margin-right: 15px;
+					font-size:2em;
+				}
+			
 	h1{
 		margin-bottom: 2.22%;
 	}
@@ -818,10 +859,7 @@ header{100%;} /*copiado al profe */
 		padding: 0.55% 0;	
 	}
 	
-	#pie_general{	
-		padding-top:0;
-		margin-top:0;
-	}
+
 }
 
 
