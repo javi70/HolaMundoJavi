@@ -190,7 +190,8 @@ nav {
 
 #content{
 	padding-top: 125px; /* para separar la pagina de la cabecera */
-/*	margin-top:200px;*/	
+/*	margin-top:200px;*/
+	width: 100%; /*RD*/	
 }
 
 
@@ -202,7 +203,7 @@ nav {
 	border-radius:20px 20px 20px 20px;
 	background-color:#8AC007;
 	padding:10px;
-	float:right;
+	float:left;
 	width:15%;	
 	font-size:12px;	
 }
@@ -712,7 +713,7 @@ header{100%;} /*copiado al profe */
 
 /* reglas media querys */
 /* se aplica para pantallas menores de 460px de ancho */
-@media screen and (max-width:460px){ 
+@media screen and (max-width:461px){ 
 
 	#head h1{
 		color:red;
@@ -749,9 +750,32 @@ header{100%;} /*copiado al profe */
 			#home{
 				width:100%;
 			}
+			
+				#home section{
+					width: 80%;
+				}
+				
+					#home section h1{
+						font-size: 1em;
+						margin-bottom: 2.22%;
+						text-align: center;
+					}
+					
+					.numero{
+						display:none;
+					}
+					
+					.tabla_azul{
+						font-size: 1em;
+					}
+
+					.tabla_azul th, .tabla_azul td {
+						padding: 5px;
+					}
+	
 		
 			#aside_home{
-				width:100%;		
+				width:80%;		
 			}
 		
 		#pie_general{
@@ -799,3 +823,6 @@ header{100%;} /*copiado al profe */
 		margin-top:0;
 	}
 }
+
+
+
