@@ -3,7 +3,7 @@
 		<li>
 			<a href="#">Ejemplos</a>
 			<ul>
-				<li>
+				<li class="submenu">
 					<a href="#">Básicos</a>
 					<ul>
 						<li><a href="ejemplos/basicos/parrafos.jsp">Párrafos y

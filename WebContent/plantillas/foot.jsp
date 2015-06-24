@@ -41,10 +41,17 @@
 <script src="js/tinymce/tinymce.min.js"></script>
 
 <!-- http://responsive-nav.com/ -->
-<script src="js/responsive-nav/responsive-nav.min.js"></script>
+ 
+ <script src="js/ResponsiveMultiLevelMenu/js/jquery.dlmenu.js" ></script>  
+ <script>
+			$(function() {
+				$( '#dl-menu' ).dlmenu({
+					animationClasses : { classin : 'dl-animate-in-2', classout : 'dl-animate-out-2' }
+				});
+			});
+</script>
 
 <!--  Custom JavaScript despu�s de cargar nuestras librer�as -->
 <script src="js/main.js"></script>
-
 </body>
 </html>
