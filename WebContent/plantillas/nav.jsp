@@ -20,6 +20,7 @@
 					<ul>
 						<li><a href="ejemplos/reales/cartelera_cine.jsp">Cartelera</a></li>					
 						<li><a href="ejemplos/reales/cartelera_detalle.jsp">Detalle cartelera</a></li>
+						<li><a href="ejemplos/reales/surf.jsp">Surf</a></li>						
 					</ul>
 				</li>
 			</ul>

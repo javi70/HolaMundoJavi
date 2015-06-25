@@ -1,0 +1,133 @@
+
+/**************************** RESET *************************************/
+
+@import url("reset.css"); 
+
+/******************************* CLEARFIX ******************************/
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/********************** MENU ****************************************/
+/******************************** NAV *************************************/
+
+nav * {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+nav li{
+	margin-bottom:0px;
+}
+
+nav ul, nav li{
+	list-style:none;
+}
+
+#dl-menu { display:none; }
+
+#menu li a{ 
+	background-color:#54AEE3;
+	color: white;
+	text-decoration:none;
+	padding:5px 10px;
+	display:block;
+}
+
+#menu li a:hover{
+	background-color:#E5E6F8;
+	color:#000;
+}
+
+#menu > li{
+	float:left; 	
+}
+
+#menu li ul{
+	display:none;
+	position:absolute;
+	min-width:200px;
+}
+
+#menu li:hover > ul{
+	display:block;
+}
+
+#menu li ul li{
+	position:relative;
+}
+
+#menu li ul li ul{
+	right:-200px;
+	top: 0px;
+	z-index:5;
+}
+
+#menu li ul li a{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+
+/*********************** LAYOUT *********************************/
+
+#head, #content, #menu, #footer { width:960px; margin:0 auto;}
+#wrapper_menu { width:100%; background-color:black; color:white; }
+
+#content{background-color:yellow;}
+
+#head{background-color:yellow;}
+
+#head img { width:5%; height:auto; }
+
+#menu nav {display:block; margin: 0 auto;}
+
+.caja1x1{
+	float:left;
+	width:235px;
+	margin-right:5px;
+	min-height:235px;
+	background-color: #006D95;
+	margin-bottom:5px;
+}
+
+.caja2x1{
+	float:left;
+	width:475px;
+	margin-right:5px;
+	min-height:235px;
+	background-color:#019CA1;
+	margin-bottom:5px;
+}
+
+.caja1x2{
+	float:left;
+	width:235px;
+	min-height:475px;
+	margin-right:5px;
+	background-color:#4D099C;	
+	margin-bottom:5px;
+}
+
+.caja2x2{
+	width:75%;
+}
+
+#fila1 div:nth-child(3n+0){
+	margin-right:0;
+}
+
+#fila2 > div:nth-child(3n+0){
+	margin-right:0;
+/*	
+    position: relative;
+    top: -240px;
+*/    	
+}
+
+/* reglas media querys */
+@media screen and (max-width:461px){ 
+
+}

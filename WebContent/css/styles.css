@@ -870,9 +870,9 @@ header{100%;} /*copiado al profe */
 	}
 */	
 	nav #menu { display:none; }
-/*	#dl-menu { display:inline; }
+	#dl-menu { display:inline; }
 	#dsk-menu { display:none; }
-*/	#logo img{ display:none;}
+	#logo img{ display:none;}
 	#nav_top{
 		display:inline;
 		position:fixed;
