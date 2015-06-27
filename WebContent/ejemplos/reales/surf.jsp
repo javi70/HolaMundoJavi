@@ -26,11 +26,13 @@
 </head>
 
 <body>
+
 	<div id="head">
 		<img src="img/dado.jpg" alt="Logotipo"/>
 	</div>
 	
 	<div id="wrapper_menu">
+	
 		<div id="menu">
 		
 			<nav class="clearfix">
@@ -142,24 +144,24 @@
 	
 	<div id="content" class="clearfix">
 	
-		<div id="fila1">
+		<div id="fila1" class="clearfix">
 			<div class="caja1x1">Caja 1:1x1</div>
 			<div class="caja2x1">Caja 2:2x1</div>
 			<div class="caja1x1">Caja 3:1x1</div>
 		</div>
 		
-		<div id="fila2">
+		<div id="fila2" class="clearfix">
 			<div class="caja1x2">Caja 4:1x2</div>		
-			<div class="caja2x2 ">
+			<div class="contenedor2x2 clearfix">		
  				<div class="caja1x1">Caja 5-1:1x1</div>
 				<div class="caja1x1">Caja 5-2:1x1</div>
 				<div class="caja1x1">Caja 5-3:1x1</div>
-				<div class="caja1x1">Caja 5-4:1x1</div>												
+				<div class="caja1x1">Caja 5-4:1x1</div>								
 			</div>
 			<div class="caja1x2">Caja 6:1x2</div>
 		</div>			
  		
-		<div id="fila3">
+		<div id="fila3" class="clearfix">
 			<div class="caja1x1">Caja 7:1x1</div>
 			<div class="caja2x1">Caja 8:2x1</div>
 			<div class="caja1x1">Caja 9:1x1</div>
