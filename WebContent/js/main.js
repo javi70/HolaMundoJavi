@@ -58,5 +58,32 @@
 	 $("input[data-widget='calendario']").datepicker($.datepicker.regional[ "es" ]);
 	 
 	 console.debug('datePicker habilitado');
+	 
+	 //menu de falconmasters.com
+//	 $(document).ready(main);
+
+	 var contador = 1;
+	 console.debug(contador);
+//	 function main () {
+	 	$('.menu_bar').click(function(){
+	 		if (contador == 1) {
+	 			$('nav').animate({
+	 				left: '0'
+	 			});
+	 			contador = 0;
+	 		} else {
+	 			contador = 1;
+	 			$('nav').animate({
+	 				left: '-100%'
+	 			});
+	 		}
+	 		 console.debug(contador);
+	 	});
+
+	 	// Mostramos y ocultamos submenus
+	 	$('.submenu').click(function(){
+	 		$(this).children('.children').slideToggle();
+	 	});
+//	 }
     	 
   });
