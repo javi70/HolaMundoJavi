@@ -275,8 +275,8 @@
 		display:inline;
 		position:fixed;
 		z-index:5;
-		bottom:5px;
-		right:-234px;
+		bottom:5%;
+		right:10%;
 		width: 20px;
 		height: 20px;
 	}
@@ -312,14 +312,11 @@
 	}
 
 	header nav {
-		width: 80%;
-		height: calc(100% - 80px);
+		width: 50%;
 		position: fixed;
 		right:100%;
 		margin: 0;
 		overflow: scroll;
-		
-/*		left: 0;*/
   		top: 50px;
 		display:block;  		
 	}
@@ -331,6 +328,7 @@
 
 	header nav ul li a {
 		display: block;
+		text-align:left;
 	}
 
 	header nav ul li:hover .children {
