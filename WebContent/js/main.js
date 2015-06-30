@@ -5,9 +5,8 @@
 
 function llamadaAjax(origen){
 	console.info("llamada Ajax");
-	var usuario=$("#usuario");
-	var email=$("#email");
-	var msg_box=$("#msgbox");
+	var input_usuario=$("#usuario");
+	var input_email=$("#email");
 	
 	//URL donde se encuentra el servicio Ajax (servlet que hemos creado)
 	var url = "ControladorAjaxRegistroUsuario";
@@ -15,7 +14,7 @@ function llamadaAjax(origen){
 	$.ajax(url, {
 		"type": "get", // usualmente post o get
 		"success": function(result) {
-		console.info("Llego el contenido y no hubo error", result);
+			console.info("Llego el contenido y no hubo error", result);
 			console.info(result);
 /*				if ((result)=="OK"){
 					console.info("Mostrado OK");
@@ -26,27 +25,62 @@ function llamadaAjax(origen){
 					$("#estado_error").css("display","inline");		
 				}
 */
+
 			$(".msg_delete").remove(); // para eliminar los spans creados anteriormente
-			if (result.existe_user){
-				usuario.after("<span class='msg_delete msg_error'>Usuario NO disponible</span>");
-			}else{
-				usuario.after("<span class='msg_delete msg_success'>Usuario disponible</span>");
-			}	
-			if (result.existe_email){
-				email.after("<span class='msg_delete msg_error'>Email NO disponible</span>");
-			}else{
-				email.after("<span class='msg_delete msg_success'>Email disponible</span>");
-			}	
+			//Si usuario != vacio escribir mensaje
+			if (result.usuario!="") {
+				if (result.libre_usuario){
+					input_usuario.after("<span class='msg_delete msg_success'>Usuario disponible</span>");
+				}else{
+					input_usuario.after("<span class='msg_delete msg_error'>Usuario NO disponible</span>");
+				}
+			}
+			// gestion mensajes email
+			if (result.email!="") {
+				if (result.libre_email){
+					input_email.after("<span class='msg_delete msg_success'>Email disponible</span>");
+				}else{
+					input_email.after("<span class='msg_delete msg_error'>Email NO disponible</span>");
+				}
+			}
+			
 		},
 		"error": function(result) {
-			console.error("Este callback maneja los errores", result);
+		console.error("Este callback maneja los errores", result);
 		},
-		"data": {	usuario 	: $("#usuario").val(),
-				  	email		: $("#email").val() 
-				 },
+		"data": { 	usuario	: input_usuario.val(),
+					email	: input_email.val() },
 		"async": true,
 		});		
-}
+} // llamadaAjax
+
+function comprobarPassword(){
+
+	$("#comprobar_pass").remove();
+	
+	//comprobamos que repass == pass
+	if (pass.value==repass.value){
+		$("#repass").after("<span id='comprobar_pass' class='msg_success'>Las contraseñas coinciden</span>");
+	}else{
+		$("#repass").after("<span id='comprobar_pass' class='msg_error'>Las contraseñas NO coinciden</span>");
+	}
+} // comprobarPassword
+
+
+function comprobarFormulario(formulario){
+//comprueba si los campos estan vacios
+	if(formulario.usuario.value.length==0) return false;
+	if(formulario.email.value.length==0) return false;
+	if(formulario.pass.value.length==0) return false;
+	
+//ver si hay algun span con class="msg_error"
+	if ($(".msg_error").size()==0) {
+		formulario.submit();
+		return true;
+	} 
+	return false;
+	
+} // comprobarFormulario 
 
 
 //Se ejecuta cuando todo el html se ha cargado
@@ -134,17 +168,26 @@ function llamadaAjax(origen){
     
 	 	
 	 	
-	 	
 		/* REGISTRO USUARIOS control de usuarios existentes */
 
 		//seleccionar usuario del formulario
 		$("#form_new_user #usuario").blur(function(){
 			//se ejecuta al perder el foco
-			llamadaAjax(this);
+			llamadaAjax();
 		});
 		
 		//seleccionar usuario del formulario
 		$("#form_new_user #email").blur(function(){
-			llamadaAjax(this);
+			llamadaAjax();
 		});	
-  });
+		
+		$("#form_new_user #pass").blur(function(){
+			comprobarPassword();
+		});	
+		
+		$("#form_new_user #repass").blur(function(){
+			comprobarPassword();
+		});	
+		
+
+	}); // end

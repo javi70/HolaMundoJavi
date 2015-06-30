@@ -34,6 +34,7 @@ public class ControladorAjaxRegistroUsuario extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		//declarar array con nombres de usuarios
 		ArrayList<String> listaUsuarios = new ArrayList<String>();
 		listaUsuarios.add("ander");
@@ -52,7 +53,7 @@ public class ControladorAjaxRegistroUsuario extends HttpServlet {
 		listaEmails.add("callou@pepe.es");
 		
 		//respuesta tipo Json
-		response.setContentType("appplication/json");
+		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");
 		
 		//variable tipo PrintWriter para escribir response
@@ -60,39 +61,37 @@ public class ControladorAjaxRegistroUsuario extends HttpServlet {
 
 		//out.print("Hola soy una respuesta");
 		
-		String usuario=request.getParameter("usuario");
-		String email=request.getParameter("email");
-		
-		if (null != usuario){
-			//comprobar que no exista el usuario
-			if (listaUsuarios.contains(usuario)){
-				//out.print("Usuario Existe, por favor elige otro");
-				//out.print("ERROR");
-				out.print("{ \"existe_user\": true , \"user\": \""+usuario+"\" }");
-			}else{
-				//out.print("Usuario Disponible");
-				//out.print("OK");
-				out.print("{ \"existe_user\": false , \"user\": \""+usuario+"\" }");
-			}		
-			
-		}else{
-			//out.print("Usuario Disponible");
-			//out.print("OK");
-			out.print("{ \"existe_user\": false , \"user\": \""+usuario+"\" }");
-		};	
+		//parametros
+		String usuario			= (request.getParameter("usuario")==null) ? "" : request.getParameter("usuario");
+			// operador ternario --> es como un if(request.getParameter("usuario")==null) usuario="" else usuario= request.getParameter("usuario")
+			// variable = (condicion)? valor1 : valor2;
+		String email			= (request.getParameter("email")==null) ? "" : request.getParameter("email");
+		boolean libre_usuario 	= false;
+		boolean libre_email 	= false;
+		boolean email_correcto	= false; // para comprobar que sea un email falso
 
-		if (null != email){
-			//comprobar que no exista el email
-			if (listaEmails.contains(email)){
-				out.print("{ \"existe_email\": true , \"email\": \""+email+"\" }");
-			}else{
-				out.print("{ \"existe_email\": false , \"email\": \""+email+"\" }");
-			}		
-			
-		}else{
-			out.print("{ \"existe_email\": false , \"email\": \""+email+"\" }");
-		};
+		//comprobacion de los campos
+
+		//comprueba que usuario sea diferente de cadena vacia y que no este en a lista de usuarios
+		if ( !"".equalsIgnoreCase(usuario) && !listaUsuarios.contains(usuario)){ 
+			libre_usuario=true;
+		}
 		
+		//comprobar Email no es cadena vacia y que no exista
+		if ( !"".equalsIgnoreCase(email) && !listaEmails.contains(email)){ 
+			libre_email=true;
+		}
+		
+		//TODO comprobar email valido
+		
+		//formatear la response
+		out.print("{");
+			out.print("\"libre_usuario\":"+libre_usuario+",");
+			out.print("\"libre_email\":"+libre_email+",");
+			out.print("\"usuario\":\""+usuario+"\","); //a�adimos comillas dobles al nombre del usuario y al email por ser strings
+			out.print("\"email\":\""+email+"\"");
+		out.print("}");
+		out.flush(); //libera el buffer		
 	}
 
 }
