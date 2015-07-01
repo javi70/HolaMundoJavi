@@ -60,7 +60,10 @@
 		<li><a href="http://librosweb.es/libro/css_avanzado/" target="_blank">CSS Avanzado</a></li>
 		<li><a href="http://www.w3schools.com/" target="_blank">W3 Schools</a></li>
 		<li><a href="http://es.learnlayout.com/clearfix.html" target="_blank">Clearfix con overflow</a></li>
-		<li><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Degradados</a></li>			
+		<li><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Degradados</a></li>
+		<li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+		<li><a href="https://www.youtube.com/watch?v=nug1pMke-y4" target="_blank">Video tutorial de Bootstrap</a></li>
+					
 	</ul>
 </aside>	
 
