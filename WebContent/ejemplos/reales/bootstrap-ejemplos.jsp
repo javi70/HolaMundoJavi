@@ -135,14 +135,26 @@
 			  <div class="carousel-inner" role="listbox">
 			    <div class="item active">
 			      <img src="http://lorempixel.com/output/city-q-c-320-240-3.jpg" alt="Imagen 1">
+			      <div class="carousel-caption">
+					Foto 1			
+      			  </div>
+			      
 			    </div>
 			
 			    <div class="item">
 			      <img src="http://lorempixel.com/output/city-q-c-320-240-10.jpg" alt="Imagen 2">
+			      <div class="carousel-caption">
+					Foto 2			
+      			  </div>
+
 			    </div>
 			
 			    <div class="item">
 			      <img src="http://lorempixel.com/output/city-q-c-320-240-2.jpg" alt="Imagen 3">
+			      <div class="carousel-caption">
+					Foto 3			
+      			  </div>
+      			  
 			    </div>
 			
 			  </div>
