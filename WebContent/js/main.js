@@ -87,10 +87,10 @@ function comprobarFormulario(formulario){
 
  $(function() {
 	 console.debug('document ready!');
-	 
+	
 	 console.warn('tinymce deshabilitado');
 	tinymce.init({selector:'textarea.curriculum'});
- 
+
 	 
 	 /* Inicialización en español para la extensión 'UI date picker' para jQuery. */
 	 /* Traducido por Vester (xvester@gmail.com). */
@@ -166,6 +166,9 @@ function comprobarFormulario(formulario){
 	 	});
 //	 }
     
+		
+
+
 	 	
 	 	
 		/* REGISTRO USUARIOS control de usuarios existentes */
@@ -188,6 +191,23 @@ function comprobarFormulario(formulario){
 		$("#form_new_user #repass").blur(function(){
 			comprobarPassword();
 		});	
-		
 
+		if (window.sessionStorage && window.localStorage) { 
+			 console.info('almacenamiento local Soportado');
+//			 localStorage.setItem('p0','hola');
+//			 sessionStorage.setItem('ps0','hola');
+			 
+			 //pintar todas las local storages
+			 var a_keys=Object.keys(localStorage); //array de keys
+			 for (i=0;i<a_keys.length;i++){
+				 console.debug(a_keys[i] + ' => '+ localStorage.getItem(a_keys[i]));
+			 }
+			 
+		} else { 
+			alert('Lo siento, pero tu navegador no acepta almacenamiento local'); 
+		} 			 
+	 
+	 
+		
+		
 	}); // end
