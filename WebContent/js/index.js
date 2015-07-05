@@ -12,15 +12,17 @@ function init(){
 
 
 // set o guardar valor	
+/*
 localStorage["l1"]="pepe";
 localStorage.setItem("l2","pepa"); // setItem(key,value)
 sessionStorage.setItem("s1","se pierde si cerramos el navegador");
-
+*/
 //recuperar valor por su Key
+/*
 console.debug(localStorage["l1"]);
 console.debug(localStorage.getItem("l2"));
 console.debug(sessionStorage.getItem("s1"));
-
+*/
 //eliminar elemento
 //localStorage.removeItem("l2");
 
@@ -32,9 +34,10 @@ console.debug(sessionStorage.getItem("s1"));
 	
 
 // array que contiene todas las keys de localStorage	
+/*
 var listado_keys=Object.keys(localStorage);
 console.debug(sessionStorage.getItem("s1"));	
-
+*/
 /*Cargamos la lista de tiradas*/
 
 }

@@ -82,12 +82,81 @@ function comprobarFormulario(formulario){
 	
 } // comprobarFormulario 
 
+//http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
+var troll = {			 
+		nombre: 'PepeGrog',
+		apellido:'mokerf',
+		
+		init:function(nombre){
+			this.nombre=nombre;
+		},
+		saluda: function(){
+			console.info('soy un troll y me llamo '+this.nombre);
+		}//este al ser el ultimo no lleva coma
+	};
+
+var visitas = {
+		url:'url',
+		titulo:'titulo',
+		fecha:'fecha',
+		
+		init:function(p_url,p_titulo,p_fecha){
+			url=p_url;
+			titulo=p_titulo;
+			fecha=p_fecha;
+		}
+}
+
+function ultimas_visitas(){
+	
+	if (window.sessionStorage && window.localStorage) { 
+		var a_visitadas=[''];
+		var a_keys=Object.keys(localStorage); //array de keys
+		
+		console.info('almacenamiento local Soportado');
+		//Carga los valores en el array
+		for (i=0;i<5;i++){
+			a_visitadas[i]=localStorage.getItem(a_keys[i]);		 
+		}
+		
+		//muestra el array en el aside
+		for (i=0;i<a_visitadas.length;i++){
+			if(a_visitadas[i]!=null){
+				paginas=a_visitadas[i].split('/');
+				pagina=paginas[paginas.length-1];
+				pagina=pagina.substring(0,pagina.lastIndexOf(".")); //para quitar la extension
+				if (pagina=='') pagina=paginas[paginas.length-2];
+				nodo='<li><a href="'+ a_visitadas[i] +'"</a>'+pagina+'</li>';
+				$('#ultimas_visitas').append(nodo);
+			}
+		}
+		 
+		//guarda la pagina actual en el array y elimina la mas antigua
+		a_visitadas.push(location.href);
+		if(a_visitadas.length>5){
+			a_visitadas.shift();
+		}
+		
+		//guarda el array en el localStorage
+		for(i=0;i<a_visitadas.length;i++){
+			localStorage.setItem('v'+i,a_visitadas[i]);
+		}
+		 
+	} else { 
+		alert('Lo siento, pero tu navegador no acepta almacenamiento local'); 
+	} 			 	
+} //ultimas_visitas
 
 //Se ejecuta cuando todo el html se ha cargado
 
  $(function() {
 	 console.debug('document ready!');
 	
+	 troll.init('ander');
+	 troll.saluda();
+
+	 ultimas_visitas();
+		
 	 console.warn('tinymce deshabilitado');
 	tinymce.init({selector:'textarea.curriculum'});
 
@@ -166,10 +235,6 @@ function comprobarFormulario(formulario){
 	 	});
 //	 }
     
-		
-
-
-	 	
 	 	
 		/* REGISTRO USUARIOS control de usuarios existentes */
 
@@ -191,23 +256,6 @@ function comprobarFormulario(formulario){
 		$("#form_new_user #repass").blur(function(){
 			comprobarPassword();
 		});	
-
-		if (window.sessionStorage && window.localStorage) { 
-			 console.info('almacenamiento local Soportado');
-//			 localStorage.setItem('p0','hola');
-//			 sessionStorage.setItem('ps0','hola');
-			 
-			 //pintar todas las local storages
-			 var a_keys=Object.keys(localStorage); //array de keys
-			 for (i=0;i<a_keys.length;i++){
-				 console.debug(a_keys[i] + ' => '+ localStorage.getItem(a_keys[i]));
-			 }
-			 
-		} else { 
-			alert('Lo siento, pero tu navegador no acepta almacenamiento local'); 
-		} 			 
-	 
-	 
-		
+	
 		
 	}); // end
