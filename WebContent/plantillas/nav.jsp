@@ -50,7 +50,8 @@
 					<li><a href="ejemplos/etiquetasnuevas/mark.jsp">Mark</a></li>				
 					<li><a href="ejemplos/etiquetasnuevas/audio.jsp">Audio</a></li>
 					<li><a href="ejemplos/etiquetasnuevas/video.jsp">Video</a></li>
-					<li><a href="ejemplos/etiquetasnuevas/canvas.jsp">Canvas</a></li>						
+					<li><a href="ejemplos/etiquetasnuevas/canvas.jsp">Canvas</a></li>
+					<li><a href="ejemplos/etiquetasnuevas/geolocation.jsp">Geolocation</a></li>											
 				</ul>
 			</li>
 			<li class="submenu"><a href="#">CSS3</a>
