@@ -35,6 +35,8 @@
 					<li><a href="ejemplos/formularios/datos_personales.jsp">Datos personales</a></li>
 					<li><a href="ejemplos/formularios/datalist.jsp">Datalist</a></li>
 					<li><a href="ejemplos/formularios/progress_meter.jsp">Progress y meter</a></li>
+					<li><a href="includes/persona/personaFormulario.jsp">Alta Persona</a></li>			
+					<li><a href="includes/ejercicioFormulario.jsp">Ejercicio del formulario</a></li>					
 				</ul>					
 			</li>
 			<li class="submenu"><a href="#">Plugins</a>
